@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MDAL - MAKE THE M</title>
+
+  <!-- Link para um arquivo CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- Áudio de fundo que toca em loop -->
+<!-- Certifique-se de que o link do áudio está funcionando -->
+<audio autoplay loop>
+    <source src="https://link_da_seu_audio.mp3" type="audio/mpeg" />
+</audio>
+
+<!-- Cabeçalho com logo, título, slogan e navegação -->
+<header>
+    <!-- Certifique-se de que o link do logo está funcionando -->
+    <img src="https://media.licdn.com/dms/image/v2/D4D0BAQE23i6VMO9f5A/company-logo_100_100/company-logo_100_100/0/1719503508041?e=1750291200&v=beta&t=LILO_PbRnLE3LwtYlwlQfgQ0XGxQ4BYX8LPHnNAWDrA" alt="Logo MDAL" class="logo" />
+    <div class="header-title">
+        <h1>MDAL</h1>
+        <p class="slogan">MAKE THE M</p>
+    </div>
+    <!-- Container para os botões de navegação no cabeçalho -->
+    <nav class="header-nav">
+        <!-- Links para as seções da página. Use o ID da seção como href. -->
+        <a href="#camisetas">Camisetas</a>
+        <a href="#acessorios">Acessórios</a>
+        <a href="#planos">Planos</a>
+        <a href="#musica">Music</a>
+        <a href="#patrocinadores">Patrocínios</a>
+        <a href="#carrinho">Carrinho (<span id="cart-count">0</span>)</a> <!-- Adicionado contador de itens -->
+    </nav>
+</header>
+
+<!-- Conteúdo principal centralizado -->
+<div class="main-content">
+
+    <!-- Seção de camisetas -->
+    <!-- Adicione o ID para o link de navegação -->
+    <section id="camisetas">
+        <h2>Camisetas</h2>
+        <div class="container">
+            <!-- Cada produto tem uma imagem, nome, preço e botão de compra -->
+            <div class="produto">
+                <!-- Certifique-se de que o link da imagem está funcionando -->
+                <!-- Adicionado data-produto-type="camiseta" para identificar o tipo -->
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQEWQ5b8nFbQ1w/feedshare-shrink_1280/B4DZam3cngG4Ak-/0/1746556276249?e=1749686400&v=beta&t=8pO-Q33ed2Y9AMOC1O-v2mh730ragHhqAeVHkNBHcaY" alt="Camiseta 1" class="produto-img" data-produto-type="camiseta" />
+                <h3>Patrocinada Black </h3>
+                <p class="preco">R$ 79,99</p>
+                <!-- Botão de compra com atributos de dados para o modal -->
+                <button
+                    class="comprar-btn"
+                    data-img="https://media.licdn.com/dms/image/v2/D4D22AQEWQ5b8nFbQ1w/feedshare-shrink_1280/B4DZam3cngG4Ak-/0/1746556276249?e=1749686400&v=beta&t=8pO-Q33ed2Y9AMOC1O-v2mh730ragHhqAeVHkNBHcaY"
+                    data-nome="Patrocinada Black"
+                    data-preco="79.99"  
+                    data-produto-type="camiseta"
+                > Comprar</button>
+            </div>
+            <div class="produto">
+                <!-- Certifique-se de que o link da imagem está funcionando -->
+                 <!-- Adicionado data-produto-type="camiseta" para identificar o tipo -->
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQEeak-66GtJug/feedshare-shrink_2048_1536/B4DZam3cnsGwAo-/0/1746556275728?e=1749686400&v=beta&t=HSIDIZ1QzCs95ltdFBTi-7FLCRH5FlOdoelp39iee-c" alt="Camiseta 2" class="produto-img" data-produto-type="camiseta" />
+                <h3>Patrocinada White</h3>
+                <p class="preco">R$ 79,99</p>
+                <button
+                    class="comprar-btn"
+                    data-img="https://media.licdn.com/dms/image/v2/D4D22AQEeak-66GtJug/feedshare-shrink_2048_1536/B4DZam3cnsGwAo-/0/1746556275728?e=1749686400&v=beta&t=HSIDIZ1QzCs95ltdFBTi-7FLCRH5FlOdoelp39iee-c"
+                    data-nome="Patrocinada White"
+                    data-preco="79.99"
+                    data-produto-type="camiseta"
+                >Comprar</button>
+            </div>
+             <div class="produto">
+                <!-- Certifique-se de que o link da imagem está funcionando -->
+                 <!-- Adicionado data-produto-type="camiseta" para identificar o tipo -->
+                 <!-- Adicionado data-imagens e data-titulos para as múltiplas imagens e títulos -->
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQGRrFI4Q8IWYw/feedshare-shrink_800/B4DZanAR8dG0Ag-/0/1746558591207?e=1749686400&v=beta&t=jKQ-tFZPkgm6fxyTSlp-s8XJhG0gaAi0iaOdaN6mCkk" alt="MDAL Black" class="produto-img" data-produto-type="camiseta" />
+                <h3>MDAL Classicas</h3>
+                <p class="preco">R$ 69,99</p>
+                <button
+                    class="comprar-btn"
+                    data-img="https://media.licdn.com/dms/image/v2/D4D22AQHles5L9ttxDA/feedshare-shrink_480/B4DZam_HDLHEAc-/0/1746558284441?e=1749686400&v=beta&t=bX5OSHh7C4SCr80fWUN2higUPKtAngYxTeJSer0_VdM"
+                    data-nome="MDAL Classicas"
+                    data-preco="69.99"
+                    data-produto-type="camiseta"
+                    data-imagens="https://media.licdn.com/dms/image/v2/D4D22AQHles5L9ttxDA/feedshare-shrink_480/B4DZam_HDLHEAc-/0/1746558284441?e=1749686400&v=beta&t=bX5OSHh7C4SCr80fWUN2higUPKtAngYxTeJSer0_VdM,https://media.licdn.com/dms/image/v2/D4D22AQEgNLmlOJNQkw/feedshare-shrink_1280/B4DZam_HDFG8As-/0/1746558284468?e=1749686400&v=beta&t=s7V82X0WOmKSgsRYBas2gRZ4iN_MYXFFmmI4iJj6pag,https://media.licdn.com/dms/image/v2/D4D22AQGDP6xV3Ok7yw/feedshare-shrink_1280/B4DZam_HGGGwAk-/0/1746558284617?e=1749686400&v=beta&t=yKVB9bHPsKYF7LC7uwSPKQ92MMMGP1ifekLUXtAmcpY,https://media.licdn.com/dms/image/v2/D4D22AQGadK50la1fmg/feedshare-shrink_1280/B4DZam_HGYGcAk-/0/1746558284654?e=1749686400&v=beta&t=7ReDtKAYT32Cua7r6CvRMV4tZEeykXm1PBSg6MK7mf0"
+                    data-titulos="MDAL Classicas Black,MDAL Classicas White,MDAL Classicas Pink,MDAL Classicas Purple" 
+                > Comprar</button>
+            </div>
+            <!-- Repita para todos os produtos -->
+        </div>
+    </section>
+
+    <!-- Seção de acessórios -->
+     <!-- Adicione o ID para o link de navegação -->
+    <section id="acessorios">
+        <h2>Acessórios</h2>
+        <div class="container">
+            <div class="produto">
+                 <!-- Certifique-se de que o link da imagem está funcionando -->
+                 <!-- Acessórios não precisam de tamanho, então não adicionamos data-produto-type="camiseta" -->
+                <img src="URL_da_imagem_do_accessorio1" alt="Bone" class="produto-img" />
+                <h3>Bone</h3>
+                <p class="preco">R$ 29,99</p>
+                <button
+                    class="comprar-btn"
+                    data-img="URL_da_imagem_do_accessorio1"
+                    data-nome="Bone"
+                    data-preco="29.99"
+                    data-produto-type="acessorio"
+                >Comprar</button>
+            </div>
+            <div class="produto">
+                 <!-- Certifique-se de que o link da imagem está funcionando -->
+                 <!-- Acessórios não precisam de tamanho -->
+                <img src="URL_da_imagem_do_accessorio2" alt="Cordinhas" class="produto-img" />
+                <h3>Cordinhas</h3>
+                <p class="preco">R$ 29,99</p>
+                <button
+                    class="comprar-btn"
+                    data-img="URL_da_imagem_do_accessorio2"
+                    data-nome="Cordinhas"
+                    data-preco="29.99"
+                    data-produto-type="acessorio"
+                >Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Box Mystery -->
+    <section>
+        <h2>Box Mystery</h2>
+        <div class="container">
+            <div class="produto">
+                 <!-- Certifique-se de que o link da imagem está funcionando -->
+                <img src="https://th.bing.com/th/id/OIP.noUiR3cAVSQiLGv0GdFxgAAAAA?w=190&h=190&c=7&r=0&o=5&cb=iwc1&pid=1.7" alt="Box" class="produto-img" />
+                <h3>Box Mystery</h3>
+                <p class="preco">R$ 39,99</p>
+                <button
+                    class="comprar-btn"
+                    data-img="https://i.imgur.com/your_image_link.png"
+                    data-nome="Box Mystery"
+                    data-preco="39.99"
+                    data-produto-type="box"
+                >Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos de assinatura -->
+     <!-- Adicione o ID para o link de navegação -->
+    <section id="planos">
+        <h2>Planos de Assinatura</h2>
+        <div class="container">
+            <div class="produto">
+                <h3>Plano Bronze</h3>
+                <p class="preco">R$ 19,90</p>
+                <p>O plano Bronze oferece acesso básico aos produtos MDAL, com uma camisa exclusiva após 6 meses de assinatura e mimos selecionados.</p>
+                <!-- Planos de assinatura não precisam de tamanho -->
+                <button
+                    class="comprar-btn"
+                    data-img=""
+                    data-nome="Plano Bronze"
+                    data-preco="19.90"
+                    data-produto-type="plano"
+                >Assinar</button>
+            </div>
+            <div class="produto">
+                <h3>Plano Silver</h3>
+                <p class="preco">R$ 29,90</p>
+                <p>Com o plano Silver, você recebe tudo do Bronze, além de acessórios exclusivos e cartas para o Card Game a cada 3 meses.</p>
+                <button
+                    class="comprar-btn"
+                    data-img=""
+                    data-nome="Plano Silver"
+                    data-preco="29.90"
+                    data-produto-type="plano"
+                >Assinar</button>
+            </div>
+            <div class="produto">
+                <h3>Plano Gold</h3>
+                <p class="preco">R$ 39,90</p>
+                <p>O plano Gold proporciona todos os benefícios do Silver, uma camiseta exclusiva a cada 3 meses e convites para grupos ou canais MDAL.</p>
+                <button
+                    class="comprar-btn"
+                    data-img=""
+                    data-nome="Plano Gold"
+                    data-preco="39.90"
+                    data-produto-type="plano"
+                >Assinar</button>
+            </div>
+            <div class="produto">
+                <h3>Plano Diamond</h3>
+                <p class="preco">R$ 49,90</p>
+                <p>O plano Diamond é a experiência completa, com todos os benefícios do Gold e uma caixa misteriosa especial todo mês!</p>
+                <button
+                    class="comprar-btn"
+                    data-img=""
+                    data-nome="Plano Diamond"
+                    data-preco="49.90"
+                    data-produto-type="plano"
+                >Assinar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção da música -->
+     <!-- Adicione o ID para o link de navegação -->
+    <section class="musica" id="musica">
+        <h2>MAKE THE M</h2>
+        <!-- Imagem da capa da música -->
+         <!-- Certifique-se de que o link da imagem está funcionando -->
+        <img src="https://th.bing.com/th/id/OIP.C_VaJq1ULcxN4qXyNQmqhwHaEK?rs=1&pid=ImgDetMain" alt="Capa da Música">
+        <!-- Texto com informações -->
+        <pre>
+• A música Make The M, foi lançada no dia 29/06/2024.
+• A música fala sobre os MDAL e eu Masuke Death A Lenda!
+• Gostaria do apoio de todos para a reprodução dentro das plataformas digitais, principalmente dentro do Spotify, para termos um alcance notável.
+• A voz é do @Alefziin, produzida por ele. Gostaria de solicitar o apoio em nome de todos os MDAL's.
+Para ouvir a música, clica no botão abaixo ↓</pre>
+        <!-- Link para ouvir no Spotify -->
+         <!-- Certifique-se de que o link do Spotify está funcionando -->
+        <a href="https://open.spotify.com/track/1XHUcifecZmGEpNaiaeR5A?si=gBjtINHaRVaMIa7QG027RA&context=spotify%3Aalbum%3A3Xc3xqXCzWYcJsQfvfKFQH" target="_blank">Escute no Spotify</a>
+    </section>
+
+    <!-- Patrocinadores -->
+     <!-- Adicione o ID para o link de navegação -->
+    <section class="patrocinadores" id="patrocinadores">
+        <h2>Patrocinadores</h2>
+        <p>Agradecemos enormemente aos nossos patrocinadores pela confiança e oportunidade de trabalhar juntos!</p>
+        <div class="container">
+            <div class="patrocinador-item">
+                 <!-- Certifique-se de que o link da imagem está funcionando -->
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQF54ukUdD0JMg/feedshare-shrink_2048_1536/B4DZanDQMbGcAo-/0/1746559370484?e=1749686400&v=beta&t=1f8QiEdw80JbXXSGp86FwKushk_YZ7PMKMqHbIziEgE" alt="DANTE Acessórios">
+                <div class="patrocinador-nome">@danteacessórios</div>
+            </div>
+            <div class="patrocinador-item">
+                 <!-- Certifique-se de que o link da imagem está funcionando -->
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQFBi2gX12zogw/feedshare-shrink_1280/B4DZanDQMkG4Ak-/0/1746559370499?e=1749686400&v=beta&t=mgkJAxAvpB1T4R4bRfMorFP5GVabz8xJR8YPIK4O9Q8" alt="Forst">
+                <div class="patrocinador-nome">@Forst</div>
+            </div>
+            <div class="patrocinador-item">
+                 <!-- Certifique-se de que o link da imagem está funcionando -->
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQEk2dk0agfrDA/feedshare-shrink_2048_1536/B4DZanDQM5HEAs-/0/1746559370495?e=1749686400&v=beta&t=hs6K8OliB0XGscGMZTH4unZCfGGpKJerEMz7-y4D9mw" alt="FATTI Arquitetura">
+                <div class="patrocinador-nome">@fatti.arquitetura</div>
+            </div>
+            <div class="patrocinador-item">
+                 <!-- Certifique-se de que o link da imagem está funcionando -->
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQENMCSo23qx3w/feedshare-shrink_1280/B4DZanDQMyHwAk-/0/1746559370522?e=1749686400&v=beta&t=RgSLUvFOur-0woorZXZ3wGfccFO666SGJgjqGQvSOMk" alt="UNIAO SPORTS">
+                <div class="patrocinador-nome">@oficialuniaosports</div>
+            </div>
+            <div class="patrocinador-item">
+                 <!-- Certifique-se de que o link da imagem está funcionando -->
+                <img src="https://media.licdn.com/dms/image/v2/D4D22AQEltS6QC_ApNA/feedshare-shrink_2048_1536/B4DZanDQNNG8Ao-/0/1746559370538?e=1749686400&v=beta&t=tUzJUZEk4wqEM5b0fmKmKAnmvWpHsKgdyeYg-nZ9eck" alt="MDAL BURGUER">
+                <div class="patrocinador-nome">@Mdalburguer</div>
+            </div>
+        </div>
+        <div class="contato">
+            <p> Quer me apoiar ou ser meu patrocinador? Entre em contato pelo Instagram: <strong>@MasukeMDAL</strong></p>
+        </div>
+    </section>
+
+
+    <!-- Sobre a MDAL -->
+    <section class="sobre">
+        <h2>Sobre a MDAL</h2>
+        <p>A MDAL é uma marca de roupas e acessórios que se dedica a oferecer produtos de alta qualidade, com um design exclusivo e moderno. Nossa missão é proporcionar estilo e conforto para todas as ocasiões. Trabalhamos com paixão e compromisso para criar peças que refletem a essência da moda contemporânea.</p>
+    </section>
+
+    <!-- Seção para o Carrinho -->
+    <section id="carrinho" style="padding: 30px; background-color: #2a2a2a; border-radius: 8px; margin-top: 30px;">
+        <h2>Carrinho de Compras (<span id="cart-item-count">0</span>)</h2> <!-- Contador de itens no carrinho -->
+        <ul id="cart-items">
+            <!-- Itens do carrinho serão adicionados aqui pelo JavaScript -->
+        </ul>
+        <div id="cart-total">Total: R$ 0.00</div>
+
+        <!-- Opções de Finalização de Compra -->
+        <div class="checkout-options">
+             <button class="btn-card" id="btn-checkout-card">Pagar com Cartão</button>
+             <button class="btn-pix" id="btn-checkout-pix">Pagar com Pix</button>
+             <button class="btn-paypal" id="btn-checkout-paypal">Pagar com PayPal</button>
+        </div>
+    </section>
+
+    <!-- Seção Hall da Fama -->
+    <section class="hall-da-fama">
+        <h2>Hall da Fama MDAL</h2>
+        <p>Um agradecimento especial a todos os assinantes e grandes apoiadores da MDAL!</p>
+        <div id="hall-da-fama-container" class="hall-da-fama-container">
+            <!-- Membros do Hall da Fama serão adicionados aqui pelo JavaScript -->
+        </div>
+    </section>
+
+
+</div> <!-- Fim do main-content -->
+
+<!-- Rodapé -->
+<footer>
+    <p>© 2024 MDAL. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Janela modal para detalhes do produto -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="modal-close">×</span> <!-- Adicionado ID para este close -->
+    <h2 id="modal-titulo"></h2> <!-- título do produto -->
+
+    <!-- Container para a imagem do modal e botões de navegação -->
+    <div class="modal-img-container">
+        <img id="modal-img" src="" alt="" style="max-width: 100%; height: auto; border-radius: 5px;"> <!-- imagem no modal de detalhes -->
+        <!-- Botões de navegação de imagem (inicialmente escondidos) -->
+        <button class="modal-nav-btn prev" id="modal-prev-img" style="display: none;">❮</button> <!-- Seta para esquerda -->
+        <button class="modal-nav-btn next" id="modal-next-img" style="display: none;">❯</button> <!-- Seta para direita -->
+    </div>
+
+
+    <p id="modal-preco" style="font-size: 1.3em; font-weight: bold;"></p> <!-- Preço no modal -->
+
+    <!-- Seletor de Tamanho (Visível apenas para camisetas) -->
+    <div class="size-selector" id="modal-size-selector" style="display: none;">
+        <label for="product-size">Tamanho:</label>
+        <select id="product-size">
+            <option value="">Selecione o Tamanho</option> <!-- Opção padrão -->
+            <option value="P">P</option>
+            <option value="M">M</option>
+            <option value="G">G</option>
+            <option value="GG">GG</option>
+            <option value="XG">XG</option>
+            <option value="Babylook P">Babylook P</option>
+            <option value="Babylook M">Babylook M</option>
+            <option value="Babylook G">Babylook G</option>
+        </select>
+    </div>
+
+    <h3>Formas de pagamento:</h3>
+    <!-- Lista de formas de pagamento -->
+    <ul>
+      <li>Cartões de crédito/débito</li>
+      <li>Pix</li>
+      <li>PayPal</li>
+    </ul>
+    <!-- Botão Adicionar ao Carrinho no Modal -->
+    <button class="add-to-cart-btn"
+            data-nome=""
+            data-preco=""
+            data-img=""
+            data-produto-type="">Adicionar ao Carrinho</button>
+  </div>
+</div>
+
+<!-- Novo Modal para Imagem Ampliada -->
+<div id="image-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="image-modal-close">×</span>
+        <img src="" alt="Imagem Ampliada" id="expanded-image">
+    </div>
+</div>
+
+
+<!-- Novo Modal para Pagamento -->
+<div id="payment-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="payment-modal-close">×</span>
+    <h2>Finalizar Compra</h2>
+    <div id="payment-details">
+        <!-- Detalhes específicos do pagamento (QR Code, link, chave Pix) serão inseridos aqui -->
+    </div>
+  </div>
+</div>
+
+  <!-- Link para um arquivo JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>

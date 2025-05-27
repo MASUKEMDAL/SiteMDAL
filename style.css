@@ -1,0 +1,703 @@
+        /* Estilo geral do corpo da página */
+        body {
+            font-family: 'Arial', sans-serif; /* Fonte mais profissional */
+            background-color: #1a1a1a; /* Fundo preto quase total */
+            margin: 0;
+            padding: 0;
+            color: #cccccc; /* Cor do texto principal */
+            line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+        }
+
+        /* Centraliza o conteúdo principal */
+        .main-content {
+            max-width: 1200px; /* Largura máxima do conteúdo */
+            margin: 0 auto; /* Centraliza o bloco */
+            padding: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #0d0d0d; /* Preto mais escuro para o cabeçalho */
+            color: #ffffff;
+            padding: 20px; /* Ajustado padding */
+            margin-bottom: 30px; /* Espaço abaixo do cabeçalho */
+            display: flex; /* Usa flexbox para alinhar itens */
+            align-items: center; /* Alinha itens verticalmente */
+            justify-content: space-between; /* Espalha itens horizontalmente */
+        }
+
+        /* Container para o título e slogan no cabeçalho */
+        .header-title {
+            flex-grow: 1; /* Permite que ocupe o espaço disponível */
+            text-align: center; /* Centraliza o texto */
+            margin: 0 20px; /* Adiciona margem lateral para não colar na logo/navegação */
+        }
+
+        /* Título principal */
+        h1 {
+            margin: 0; /* Remove margem padrão */
+            font-size: 3em; /* Tamanho maior para o título */
+            text-transform: uppercase; /* Transforma em maiúsculas */
+            letter-spacing: 2px; /* Espaçamento entre letras */
+        }
+
+        /* Títulos das seções */
+        h2 {
+            color: #ffffff; /* Branco para títulos de seção */
+            text-align: center;
+            margin-top: 40px; /* Espaço acima do título da seção */
+            margin-bottom: 20px; /* Espaço abaixo do título da seção */
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+        /* Títulos menores (produtos) */
+        h3 {
+            margin: 10px 0;
+            text-align: center;
+            color: #e0e0e0; /* Cinza claro para nomes de produtos */
+            font-size: 1.1em;
+        }
+
+        /* Slogan em itálico */
+        .slogan {
+            font-style: italic;
+            font-size: 1.3em; /* Tamanho um pouco maior */
+            color: #808080; /* Cinza médio */
+            margin-top: 5px; /* Espaço acima do slogan */
+        }
+
+        /* Container flexível para os itens (produtos, patrocinadores, hall da fama) */
+        .container {
+            display: flex;
+            justify-content: center; /* Centraliza os itens horizontalmente */
+            align-items: flex-start;
+            flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+            gap: 20px; /* Espaço entre os itens */
+            padding: 0 20px; /* Padding lateral */
+        }
+
+        /* Estilo dos itens de produto */
+        .produto {
+            background-color: #2a2a2a; /* Fundo cinza escuro para produtos */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra mais pronunciada */
+            text-align: center;
+            width: 250px; /* Largura fixa para os produtos */
+            display: flex; /* Usa flexbox para alinhar conteúdo interno */
+            flex-direction: column; /* Organiza conteúdo verticalmente */
+            justify-content: space-between; /* Espalha o conteúdo verticalmente */
+        }
+
+        /* Estilo das imagens dos produtos */
+        .produto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px; /* Espaço abaixo da imagem */
+            cursor: pointer; /* Indica que a imagem é clicável */
+        }
+
+        /* Estilo do preço */
+        .preco {
+            font-size: 1.4em; /* Preço maior */
+            color: #ffffff; /* Preço em branco */
+            margin: 10px 0;
+            font-weight: bold; /* Preço em negrito */
+        }
+
+        /* Estilo do botão de compra/assinatura */
+        .comprar-btn {
+            background-color: #404040; /* Botão cinza escuro */
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px; /* Más padding no botón */
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1em;
+            transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+        }
+
+        .comprar-btn:hover {
+            background-color: #606060; /* Color del botón al pasar el mouse */
+        }
+
+        /* Estilo do modal (janela de visualização ampliada) */
+        .modal {
+            display: none; /* inicialmente escondido */
+            position: fixed; /* fixa na tela */
+            z-index: 9999; /* fica acima de outros elementos */
+            left: 0; top: 0;
+            width: 100%; height: 100%; /* ocupa toda a tela */
+            background-color: rgba(0,0,0,0.8); /* Fundo escurecido mais opaco */
+            justify-content: center; /* centraliza conteúdo */
+            align-items: center;
+        }
+
+        /* conteúdo do modal */
+        .modal-content {
+            background-color: #2a2a2a; /* Fundo cinza escuro para o modal */
+            padding: 30px; /* Mais padding */
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            color: #cccccc; /* Cor do texto no modal */
+        }
+
+        .modal-content h2 {
+            color: #ffffff; /* Título no modal em branco */
+            margin-top: 0;
+        }
+
+        .modal-content ul {
+            list-style: none; /* Remove marcadores de lista */
+            padding: 0;
+            text-align: left; /* Alinha a lista de pagamento à esquerda */
+            margin-top: 15px;
+        }
+
+        .modal-content li {
+            margin-bottom: 5px;
+        }
+
+        /* botão de fechar (X) no canto superior direito do modal */
+        .close {
+            position: absolute;
+            top: 15px; /* Posição ajustada */
+            right: 20px; /* Posição ajustada */
+            font-size: 30px; /* Tamanho maior para o X */
+            font-weight: bold;
+            color: #888;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #ffffff;
+        }
+
+        /* Botão Adicionar ao Carrinho no Modal */
+        .add-to-cart-btn {
+            background-color: #606060; /* Cor do botão de adicionar ao carrinho */
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 20px; /* Mais espaço acima */
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #808080; /* Cor ao passar o mouse */
+        }
+
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0d0d0d; /* Preto mais escuro para o rodapé */
+            color: #808080; /* Cinza médio para o texto do rodapé */
+            margin-top: 40px; /* Espaço acima do rodapé */
+        }
+
+        /* Logo no cabeçalho */
+        header .logo {
+            max-width: 120px; /* Mantém o tamanho do logo */
+            margin-right: 20px; /* Espaço à direita do logo */
+        }
+
+        /* Patrocinadores */
+        .patrocinadores {
+            text-align: center; /* Centraliza o texto da seção patrocinadores */
+            margin-bottom: 30px;
+        }
+
+        .patrocinadores p {
+            color: #cccccc; /* Cor do texto dos patrocinadores */
+            margin-bottom: 20px;
+        }
+
+        .patrocinadores .container {
+            gap: 30px; /* Mais espaço entre as imagens dos patrocinadores */
+        }
+
+        .patrocinadores .patrocinador-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .patrocinadores img {
+            width: 150px; /* Largura fixa para as imagens dos patrocinadores */
+            height: auto;
+            object-fit: contain; /* Garante que a imagem inteira seja visível */
+            border-radius: 5px;
+            background-color: #ffffff; /* Fundo branco para destacar logos coloridos */
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .patrocinador-nome {
+            display: block;
+            margin-top: 10px;
+            color: #cccccc; /* Cor do nome do patrocinador */
+            font-size: 0.9em;
+        }
+
+        /* Seção contato */
+        .contato {
+            background-color: #2a2a2a; /* Fundo cinza escuro para contato */
+            padding: 20px;
+            margin: 30px auto; /* Centraliza e adiciona margem */
+            max-width: 800px; /* Largura máxima para o bloco de contato */
+            text-align: center;
+            border-radius: 8px;
+            color: #ffffff; /* Texto em branco */
+        }
+
+        .contato strong {
+            color: #ffffff; /* Nome do Instagram em branco */
+        }
+
+
+        /* Seção sobre */
+        .sobre {
+            padding: 30px;
+            background-color: #2a2a2a; /* Fundo cinza escuro para "Sobre" */
+            margin: 30px auto;
+            max-width: 800px;
+            text-align: justify;
+            border-radius: 8px;
+            color: #cccccc; /* Texto em cinza claro */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .sobre h2 {
+            color: #ffffff; /* Título "Sobre" em branco */
+            margin-top: 0;
+        }
+
+        /* Seção música */
+        .musica {
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #2a2a2a; /* Fundo cinza escuro para "Música" */
+            max-width: 800px;
+            text-align: center;
+            border-radius: 8px;
+            color: #cccccc; /* Texto em cinza claro */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .musica h2 {
+            color: #ffffff; /* Título "Música" em branco */
+            margin-top: 0;
+        }
+
+        .musica pre {
+            font-size: 1.1em; /* Tamanho da fonte ajustado */
+            line-height: 1.6;
+            white-space: pre-wrap; /* Permite quebra de linha no <pre> */
+            word-wrap: break-word; /* Garante quebra de palavras longas */
+            color: #cccccc; /* Cor do texto no pre */
+        }
+
+        .musica img {
+            max-width: 300px; /* Tamanho máximo da imagem da música */
+            margin: 20px auto; /* Centraliza a imagem */
+            display: block; /* Faz a imagem se comportar como um bloco para centralizar com margin: auto */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .musica a {
+            color: #ffffff; /* Cor do link da música */
+            text-decoration: none; /* Remove sublinhado */
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .musica a:hover {
+            color: #808080; /* Cor do link ao passar o mouse */
+        }
+
+        /* Container para os botões de navegação no cabeçalho */
+        .header-nav {
+            display: flex; /* Usa flexbox para alinhar os botões */
+            align-items: center;
+            flex-wrap: wrap; /* Permite que os botões quebrem em telas menores */
+            justify-content: flex-end; /* Alinha os botões à direita */
+        }
+
+        .header-nav a {
+            color: #ffffff; /* Cor dos botões */
+            text-decoration: none;
+            margin-left: 15px; /* Espaço à esquerda de cada botão */
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .header-nav a:hover {
+            color: #808080; /* Cor dos botões ao passar o mouse */
+        }
+
+        /* Estilo para a lista de itens no carrinho */
+        #cart-items {
+            list-style: none;
+            padding: 0;
+            text-align: left; /* Alinha os itens do carrinho à esquerda */
+            margin-top: 20px;
+        }
+
+        #cart-items li {
+            background-color: #3a3a3a; /* Fundo para cada item do carrinho */
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            display: flex; /* Usa flexbox para alinhar nome, preço e botão de remover */
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #cart-items li span {
+            flex-grow: 1; /* Permite que o nome do item ocupe espaço */
+            margin-right: 10px;
+        }
+
+        .remove-item-btn {
+            background-color: #e74c3c; /* Cor do botão remover (vermelho) */
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+
+        .remove-item-btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Estilo para o total do carrinho */
+        #cart-total {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: right; /* Alinha o total à direita */
+            padding-right: 10px; /* Espaço para não colar na borda */
+        }
+
+        /* Botões de Finalização de Compra no carrinho */
+        .checkout-options {
+            display: flex;
+            flex-direction: column; /* Empilha os botões */
+            gap: 15px; /* Espaço entre os botões */
+            margin-top: 30px;
+            align-items: center; /* Centraliza os botões */
+        }
+
+        .checkout-options button, .checkout-options a {
+            display: block; /* Fazem os links se comportarem como blocos */
+            width: 80%; /* Largura dos botões */
+            max-width: 300px; /* Largura máxima */
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none; /* Remove sublinhado dos links */
+            transition: background-color 0.3s ease;
+            color: white; /* Cor do texto */
+        }
+
+        .checkout-options .btn-card {
+            background-color: #3498db; /* Azul para cartão */
+        }
+        .checkout-options .btn-card:hover {
+            background-color: #2980b9;
+        }
+
+        .checkout-options .btn-pix {
+            background-color: #2ecc71; /* Verde para Pix */
+        }
+        .checkout-options .btn-pix:hover {
+            background-color: #27ae60;
+        }
+
+         .checkout-options .btn-paypal {
+            background-color: #f39c12; /* Laranja para PayPal */
+        }
+        .checkout-options .btn-paypal:hover {
+            background-color: #e67e22;
+        }
+
+
+        /* Estilos para o Hall da Fama */
+        .hall-da-fama {
+            padding: 30px;
+            background-color: #2a2a2a; /* Fundo cinza escuro */
+            margin: 30px auto;
+            max-width: 900px; /* Largura um pouco maior para o hall */
+            text-align: center;
+            border-radius: 8px;
+            color: #cccccc;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .hall-da-fama h2 {
+             color: #ffffff; /* Título em branco */
+             margin-top: 0;
+        }
+
+        .hall-da-fama-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px; /* Espaço entre os membros */
+            margin-top: 30px;
+        }
+
+        .hall-da-fama-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px; /* Largura fixa para cada item */
+        }
+
+        .hall-da-fama-item img {
+            width: 80px; /* Tamanho da imagem de perfil */
+            height: 80px;
+            border-radius: 50%; /* Imagem redonda */
+            object-fit: cover; /* Garante que a imagem cubra a área */
+            border: 3px solid #606060; /* Borda sutil */
+            margin-bottom: 8px;
+        }
+
+        .hall-da-fama-item .nome {
+            font-size: 0.9em;
+            color: #e0e0e0;
+            word-break: break-word; /* Quebra palavras longas */
+        }
+
+        /* Estilos para o Modal de Pagamento */
+        #payment-modal .modal-content {
+             max-width: 500px; /* Tamanho ajustado para o modal de pagamento */
+        }
+
+         #payment-modal h2 {
+            margin-bottom: 15px;
+         }
+
+        #payment-details {
+            margin-top: 20px;
+            text-align: center; /* Centraliza os detalhes de pagamento */
+        }
+
+        #payment-details p {
+            margin-bottom: 10px;
+        }
+
+        #payment-details img { /* Estilo para a imagem do QR Code */
+            max-width: 200px;
+            height: auto;
+            margin: 15px auto;
+            display: block; /* Centraliza a imagem */
+        }
+
+        #payment-details .copy-pix-btn {
+            background-color: #3498db; /* Cor para o botão de copiar */
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #payment-details .copy-pix-btn:hover {
+             background-color: #2980b9;
+        }
+
+        /* Estilos para o Modal de Imagem Ampliada */
+        #image-modal .modal-content {
+            max-width: 90%; /* Ocupa mais largura */
+            max-height: 90%; /* Ocupa mais altura */
+            padding: 10px; /* Padding menor */
+            background-color: transparent; /* Fundo transparente */
+            box-shadow: none; /* Remove sombra */
+            display: flex; /* Usa flexbox */
+            justify-content: center; /* Centraliza a imagem */
+            align-items: center;
+        }
+
+        #image-modal img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Garante que a imagem inteira seja visível */
+            border-radius: 8px; /* Mantém borda arredondada */
+        }
+
+        #image-modal .close {
+            position: absolute; /* Posição absoluta em relação ao modal */
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            color: white; /* Cor do X branco no modal de imagem */
+            cursor: pointer;
+            transition: color 0.3s ease;
+            background-color: rgba(0,0,0,0.5); /* Fundo semi-transparente para o X */
+            border-radius: 50%;
+            padding: 0 8px 2px 8px; /* Ajuste de padding para o X */
+            line-height: 1; /* Ajusta a altura da linha */
+            z-index: 10000; /* Garante que o X fique acima da imagem */
+        }
+         #image-modal .close:hover {
+             background-color: rgba(0,0,0,0.8);
+         }
+
+         /* Estilos para a seleção de tamanho no modal de produto */
+        .modal-content .size-selector {
+            margin: 15px 0;
+            text-align: center; /* Centraliza o seletor */
+        }
+
+        .modal-content .size-selector label {
+            margin-right: 10px;
+            color: #e0e0e0;
+            font-weight: bold;
+        }
+
+        .modal-content .size-selector select {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #606060;
+            background-color: #3a3a3a;
+            color: #cccccc;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        /* Estilos para o container de imagem e botões no modal de detalhes */
+        .modal-img-container {
+            position: relative; /* Para posicionar os botões de navegação */
+            margin-bottom: 15px;
+            display: inline-block; /* Para centralizar o container */
+        }
+
+        .modal-img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block; /* Para remover espaço extra abaixo da imagem */
+        }
+
+        /* Estilos para os botões de navegação de imagem */
+        .modal-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+            z-index: 10; /* Garante que os botões fiquem acima da imagem */
+            border-radius: 50%; /* Botões redondos */
+            width: 40px; /* Tamanho fixo */
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-nav-btn.prev {
+            left: 10px;
+        }
+
+        .modal-nav-btn.next {
+            right: 10px;
+        }
+
+        .modal-nav-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+        /* Responsividade básica */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column; /* Empilha logo, título e navegação em telas menores */
+                align-items: center;
+                text-align: center;
+            }
+
+            header .logo {
+                margin-right: 0;
+                margin-bottom: 10px; /* Espaço abaixo do logo empilhado */
+            }
+
+            .header-title {
+                text-align: center; /* Garante centralização */
+                margin: 10px 0; /* Adiciona margem acima e abaixo do título empilhado */
+            }
+
+            .header-nav {
+                justify-content: center; /* Centraliza os botões empilhados */
+                margin-top: 10px; /* Espaço acima da navegação empilhado */
+            }
+
+            .header-nav a {
+                margin: 5px 10px; /* Espaço ajustado entre botões em telas menores */
+                display: inline-block; /* Permite quebra de linha se necessário */
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.6em;
+            }
+            .slogan {
+                font-size: 1em;
+            }
+            .produto {
+                width: 100%; /* Produtos ocupam a largura total em telas menores */
+                max-width: 300px; /* Limita a largura máxima em telas pequenas */
+            }
+            .container {
+                 justify-content: center; /* Centraliza os itens empilhados */
+            }
+            .patrocinadores img {
+                 width: 100px; /* Tamanho menor para logos em telas menores */
+            }
+
+            .hall-da-fama-item {
+                width: 80px; /* Largura menor para itens do hall em telas menores */
+            }
+            .hall-da-fama-item img {
+                width: 60px; /* Tamanho menor para imagens do hall em telas menores */
+                height: 60px;
+            }
+
+            .checkout-options button, .checkout-options a {
+                width: 90%; /* Aumenta a largura dos botões em telas pequenas */
+            }
+
+            #image-modal .modal-content {
+                 padding: 5px; /* Menos padding em telas pequenas */
+            }
+        }
