@@ -22,20 +22,13 @@ class ShoppingCart {
             }
         });
 
-        // Checkout buttons
-        const checkoutButtons = {
-            card: document.getElementById('btn-checkout-card'),
-            pix: document.getElementById('btn-checkout-pix'),
-            paypal: document.getElementById('btn-checkout-paypal')
-        };
-
-        Object.entries(checkoutButtons).forEach(([method, button]) => {
-            if (button) {
-                button.addEventListener('click', () => {
-                    this.handleCheckout(method);
-                });
-            }
-        });
+        // WhatsApp checkout button
+        const whatsappButton = document.getElementById('btn-checkout-whatsapp');
+        if (whatsappButton) {
+            whatsappButton.addEventListener('click', () => {
+                this.handleWhatsAppCheckout();
+            });
+        }
     }
 
     handleAddToCart(button) {
@@ -82,16 +75,30 @@ class ShoppingCart {
         this.showNotification('Item removido do carrinho.', 'info');
     }
 
-    handleCheckout(method) {
+    handleWhatsAppCheckout() {
         if (this.cart.length === 0) {
             this.showNotification('Seu carrinho está vazio.', 'warning');
             return;
         }
 
-        // Open payment modal with the selected method
-        if (window.PaymentModal) {
-            window.PaymentModal.open(method, this.getTotal(), this.cart);
-        }
+        const message = this.generateWhatsAppMessage();
+        const whatsappUrl = `https://wa.me/5534998829396?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    }
+
+    generateWhatsAppMessage() {
+        let message = "🛒 *Pedido MDAL*\n\n";
+        message += "Olá! Gostaria de finalizar meu pedido:\n\n";
+
+        this.cart.forEach((item, index) => {
+            const displayName = item.tamanho ? `${item.nome} (${item.tamanho})` : item.nome;
+            message += `${index + 1}. ${displayName} - ${MDALWebsite.formatPrice(item.preco)}\n`;
+        });
+
+        message += `\n💰 *Total: ${MDALWebsite.formatPrice(this.getTotal())}*\n\n`;
+        message += "Aguardo informações sobre formas de pagamento e entrega. Obrigado!";
+
+        return message;
     }
 
     addItem(item) {
@@ -163,21 +170,14 @@ class ShoppingCart {
     }
 
     updateCheckoutButtons() {
-        const checkoutButtons = [
-            document.getElementById('btn-checkout-card'),
-            document.getElementById('btn-checkout-pix'),
-            document.getElementById('btn-checkout-paypal')
-        ];
-
+        const checkoutButton = document.getElementById('btn-checkout-whatsapp');
         const isEmpty = this.cart.length === 0;
 
-        checkoutButtons.forEach(button => {
-            if (button) {
-                button.disabled = isEmpty;
-                button.style.opacity = isEmpty ? '0.5' : '1';
-                button.style.cursor = isEmpty ? 'not-allowed' : 'pointer';
-            }
-        });
+        if (checkoutButton) {
+            checkoutButton.disabled = isEmpty;
+            checkoutButton.style.opacity = isEmpty ? '0.5' : '1';
+            checkoutButton.style.cursor = isEmpty ? 'not-allowed' : 'pointer';
+        }
     }
 
     getTotal() {

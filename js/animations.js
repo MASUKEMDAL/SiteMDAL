@@ -213,14 +213,38 @@ class AnimationManager {
 
     initializeHallOfFame() {
         const hallOfFameMembers = [
-            { nome: "Crazy Dragon", foto: "https://media.licdn.com/dms/image/v2/D4D03AQE_3zs32K8iHQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724450909764?e=1752105600&v=beta&t=w6dgSipS6wKDY9tHwy1VBmPAYoPnvUHWRGw6grVVOCg" },
-            { nome: "12 Bala", foto: "https://media.licdn.com/dms/image/v2/D4D03AQHlT171zmr3rw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722853292227?e=1752105600&v=beta&t=ne8cLntZlcWWAA5VdhhLw9dVo05kdK2o2g1T2I0DN3I" },
-            { nome: "Vizzky", foto: "https://media.licdn.com/dms/image/v2/D4D03AQERZaB-vCUVyQ/profile-displayphoto-shrink_800_800/B4DZPCa3.jGgAc-/0/1734133645686?e=1752105600&v=beta&t=00YXVygqsBs3f4Wwn9vMJ4CKIUswwQcvFBlXAv_CTJI" },
-            { nome: "Samurai", foto: "https://media.licdn.com/dms/image/v2/D4D03AQE3PEy3O__bDQ/profile-displayphoto-shrink_400_400/B4DZanGkaVGcAg-/0/1746560241098?e=1752105600&v=beta&t=DX4enLWyscV92a9PtntFW2fccfpiOei9t3kosQY-ihg" },
-            { nome: "Leitinho", foto: "https://media.licdn.com/dms/image/v2/D4D03AQEg9Ur4fFXbTQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720365094005?e=1752105600&v=beta&t=chAE1N27xGgVlG0nBA8sMRyHn500bb2wl7_7kFNuZo0" },
-            { nome: "Laurão", foto: "https://media.licdn.com/dms/image/v2/C4E03AQF78LT6C-O-RA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1650290231896?e=1752105600&v=beta&t=8kkHxYIF3J-n2tCqxCsaTbJsdL2Bx6pHgvMRHtrR6mI" },
-            { nome: "Kaminari", foto: "https://media.licdn.com/dms/image/v2/D4D03AQEvrqH6rSb10A/profile-displayphoto-shrink_800_800/B4DZWdANrfHYAg-/0/1742095835938?e=1752105600&v=beta&t=CwabGPyPxucBFaL9Pfw9CyZ61P_o5jLN0BoVxi2QewM" },
-            { nome: "Cabeça", foto: "https://media.licdn.com/dms/image/v2/D4D03AQFrREvxfyYfpA/profile-displayphoto-shrink_800_800/B4DZZuMX1pHIAc-/0/1745605459846?e=1752105600&v=beta&t=BoSV7zO88aZ5bjNEod8kUGKaA_7VrdPlTLj6fdRjaZk" }
+            { 
+                nome: "Crazy Dragon", 
+                foto: "https://media.licdn.com/dms/image/v2/D4D03AQE_3zs32K8iHQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724450909764?e=1752105600&v=beta&t=w6dgSipS6wKDY9tHwy1VBmPAYoPnvUHWRGw6grVVOCg"
+            },
+            { 
+                nome: "12 Bala", 
+                foto: "https://media.licdn.com/dms/image/v2/D4D03AQHlT171zmr3rw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722853292227?e=1752105600&v=beta&t=ne8cLntZlcWWAA5VdhhLw9dVo05kdK2o2g1T2I0DN3I"
+            },
+            { 
+                nome: "Vizzky", 
+                foto: "https://media.licdn.com/dms/image/v2/D4D03AQERZaB-vCUVyQ/profile-displayphoto-shrink_800_800/B4DZPCa3.jGgAc-/0/1734133645686?e=1752105600&v=beta&t=00YXVygqsBs3f4Wwn9vMJ4CKIUswwQcvFBlXAv_CTJI"
+            },
+            { 
+                nome: "Samurai", 
+                foto: "https://media.licdn.com/dms/image/v2/D4D03AQE3PEy3O__bDQ/profile-displayphoto-shrink_400_400/B4DZanGkaVGcAg-/0/1746560241098?e=1752105600&v=beta&t=DX4enLWyscV92a9PtntFW2fccfpiOei9t3kosQY-ihg"
+            },
+            { 
+                nome: "Leitinho", 
+                foto: "https://media.licdn.com/dms/image/v2/D4D03AQEg9Ur4fFXbTQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720365094005?e=1752105600&v=beta&t=chAE1N27xGgVlG0nBA8sMRyHn500bb2wl7_7kFNuZo0"
+            },
+            { 
+                nome: "Laurão", 
+                foto: "https://media.licdn.com/dms/image/v2/C4E03AQF78LT6C-O-RA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1650290231896?e=1752105600&v=beta&t=8kkHxYIF3J-n2tCqxCsaTbJsdL2Bx6pHgvMRHtrR6mI"
+            },
+            { 
+                nome: "Kaminari", 
+                foto: "https://media.licdn.com/dms/image/v2/D4D03AQEvrqH6rSb10A/profile-displayphoto-shrink_800_800/B4DZWdANrfHYAg-/0/1742095835938?e=1752105600&v=beta&t=CwabGPyPxucBFaL9Pfw9CyZ61P_o5jLN0BoVxi2QewM"
+            },
+            { 
+                nome: "Cabeça", 
+                foto: "https://media.licdn.com/dms/image/v2/D4D03AQFrREvxfyYfpA/profile-displayphoto-shrink_800_800/B4DZZuMX1pHIAc-/0/1745605459846?e=1752105600&v=beta&t=BoSV7zO88aZ5bjNEod8kUGKaA_7VrdPlTLj6fdRjaZk"
+            }
         ];
 
         this.populateHallOfFame(hallOfFameMembers);

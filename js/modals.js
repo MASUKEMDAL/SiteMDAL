@@ -11,13 +11,13 @@ class ModalManager {
         this.setupEventListeners();
         this.setupProductModals();
         this.setupImageModal();
-        this.setupPaymentModal();
+        this.setupMemberModal();
     }
 
     setupEventListeners() {
         // Close modals when clicking outside
         window.addEventListener('click', (event) => {
-            const modals = ['modal', 'image-modal', 'payment-modal'];
+            const modals = ['modal', 'image-modal', 'member-modal'];
             modals.forEach(modalId => {
                 const modal = document.getElementById(modalId);
                 if (event.target === modal) {
@@ -75,13 +75,19 @@ class ModalManager {
         });
     }
 
-    setupPaymentModal() {
-        // Payment modal will be handled by the cart system
-        window.PaymentModal = {
-            open: (method, total, items) => {
-                this.openPaymentModal(method, total, items);
+    setupMemberModal() {
+        // Hall of Fame member clicks
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.hall-of-fame-item')) {
+                const memberItem = e.target.closest('.hall-of-fame-item');
+                const img = memberItem.querySelector('img');
+                const name = memberItem.querySelector('.nome').textContent;
+                
+                if (img && name) {
+                    this.openMemberModal(img.src, name);
+                }
             }
-        };
+        });
     }
 
     openProductModal(button) {
@@ -208,112 +214,38 @@ class ModalManager {
         }
     }
 
-    openPaymentModal(method, total, items) {
-        const paymentModal = document.getElementById('payment-modal');
-        const paymentDetails = document.getElementById('payment-details');
+    openMemberModal(imageSrc, memberName) {
+        const memberModal = document.getElementById('member-modal');
+        const memberPhoto = document.getElementById('member-photo');
+        const memberNameElement = document.getElementById('member-name');
+        const memberDescription = document.getElementById('member-description');
 
-        if (!paymentModal || !paymentDetails) return;
-
-        paymentDetails.innerHTML = '';
-
-        if (method === 'card' || method === 'paypal') {
-            this.setupCardOrPayPalPayment(paymentDetails, method, total, items);
-        } else if (method === 'pix') {
-            this.setupPixPayment(paymentDetails, total, items);
-        }
-
-        paymentModal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    }
-
-    setupCardOrPayPalPayment(container, method, total, items) {
-        const paymentLink = this.getPaymentLink(method, total, items);
-        
-        if (paymentLink) {
-            const linkElement = document.createElement('a');
-            linkElement.href = paymentLink;
-            linkElement.target = '_blank';
-            linkElement.className = `btn btn-${method === 'card' ? 'card' : 'paypal'}`;
-            linkElement.textContent = `Pagar com ${method === 'card' ? 'Cartão' : 'PayPal'}`;
+        if (memberModal && memberPhoto && memberNameElement && memberDescription) {
+            memberPhoto.src = imageSrc;
+            memberNameElement.textContent = memberName;
             
-            container.appendChild(linkElement);
+            // Get member description based on name
+            const description = this.getMemberDescription(memberName);
+            memberDescription.textContent = description;
             
-            const description = document.createElement('p');
-            description.textContent = `Você será redirecionado para a página de pagamento ${method === 'card' ? 'do Cartão' : 'do PayPal'}.`;
-            description.style.marginTop = '1rem';
-            container.appendChild(description);
-        } else {
-            container.innerHTML = '<p>Não foi possível gerar o link de pagamento para esta opção.</p>';
+            memberModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
         }
     }
 
-    setupPixPayment(container, total, items) {
-        const pixData = this.getPixData(total, items);
-        
-        if (pixData && pixData.qrCodeImgUrl) {
-            const qrCodeImg = document.createElement('img');
-            qrCodeImg.src = pixData.qrCodeImgUrl;
-            qrCodeImg.alt = 'QR Code Pix';
-            qrCodeImg.style.maxWidth = '200px';
-            qrCodeImg.style.margin = '1rem auto';
-            qrCodeImg.style.display = 'block';
-            container.appendChild(qrCodeImg);
-        }
-
-        if (pixData && pixData.pixKey) {
-            const keyInfo = document.createElement('p');
-            keyInfo.innerHTML = `Chave Pix: <strong>${pixData.pixKey}</strong>`;
-            container.appendChild(keyInfo);
-
-            const copyButton = document.createElement('button');
-            copyButton.className = 'btn btn-primary';
-            copyButton.textContent = 'Copiar Chave Pix';
-            copyButton.style.marginTop = '1rem';
-            
-            copyButton.addEventListener('click', () => {
-                navigator.clipboard.writeText(pixData.pixKey).then(() => {
-                    if (window.cart) {
-                        window.cart.showNotification('Chave Pix copiada!', 'success');
-                    }
-                }).catch(() => {
-                    if (window.cart) {
-                        window.cart.showNotification('Erro ao copiar chave Pix', 'error');
-                    }
-                });
-            });
-            
-            container.appendChild(copyButton);
-        }
-
-        const totalInfo = document.createElement('p');
-        totalInfo.innerHTML = `<strong>Total a pagar: ${MDALWebsite.formatPrice(total)}</strong>`;
-        totalInfo.style.marginTop = '1rem';
-        totalInfo.style.fontSize = '1.2rem';
-        container.appendChild(totalInfo);
-    }
-
-    getPaymentLink(method, total, items) {
-        // Mock payment links - replace with real payment gateway integration
-        console.log(`Generating ${method} payment link for total: ${total}, items:`, items);
-        
-        if (method === 'card') {
-            return `https://seu-gateway-de-pagamento.com/checkout/card?amount=${total.toFixed(2)}`;
-        } else if (method === 'paypal') {
-            return `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amount=${total.toFixed(2)}&currency_code=BRL&item_name=Compra MDAL`;
-        }
-        
-        return null;
-    }
-
-    getPixData(total, items) {
-        // Mock PIX data - replace with real PIX API integration
-        console.log(`Generating PIX data for total: ${total}, items:`, items);
-        
-        return {
-            qrCodeImgUrl: 'https://via.placeholder.com/200x200/2a2a2a/ffffff?text=QR+CODE+PIX',
-            pixKey: 'suachave@email.com', // Replace with real PIX key
-            copyPasteCode: '00020126330014BR.GOV.BCB.PIX01110000000000000052040000530398656304F080'
+    getMemberDescription(memberName) {
+        const descriptions = {
+            "Crazy Dragon": "Membro fundador da MDAL, conhecido por sua criatividade e energia contagiante. Sempre presente nos momentos mais importantes da comunidade.",
+            "12 Bala": "Veterano respeitado da MDAL, traz experiência e sabedoria para o grupo. Sua dedicação é inspiradora para todos os membros.",
+            "Vizzky": "Talentoso e inovador, Vizzky contribui com ideias únicas e uma perspectiva fresca para os projetos da MDAL.",
+            "Samurai": "Com honra e disciplina, Samurai representa os valores tradicionais da MDAL. Sua lealdade é inquestionável.",
+            "Leitinho": "Membro carismático e divertido, Leitinho traz alegria e descontração para a comunidade MDAL.",
+            "Laurão": "Líder natural e estrategista, Laurão ajuda a guiar a MDAL em direção ao sucesso e crescimento.",
+            "Kaminari": "Energético como um raio, Kaminari traz dinamismo e velocidade para todos os projetos da MDAL.",
+            "Cabeça": "Pensador e filósofo do grupo, Cabeça sempre tem uma perspectiva interessante sobre os desafios da MDAL."
         };
+
+        return descriptions[memberName] || "Membro valioso da comunidade MDAL, contribuindo para o crescimento e sucesso do grupo.";
     }
 
     closeModal(modalId) {
@@ -325,7 +257,7 @@ class ModalManager {
     }
 
     closeAllModals() {
-        const modals = ['modal', 'image-modal', 'payment-modal'];
+        const modals = ['modal', 'image-modal', 'member-modal'];
         modals.forEach(modalId => this.closeModal(modalId));
     }
 }
