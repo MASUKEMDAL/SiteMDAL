@@ -1,627 +1,813 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MDAL - MAKE THE M</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-logo">MDAL</div>
-            <div class="loading-text">MAKE THE M</div>
-            <div class="loading-spinner"></div>
-        </div>
+      <div class="loading-content">
+        <div class="loading-logo">MDAL</div>
+        <div class="loading-text">MAKE THE M</div>
+        <div class="loading-spinner"></div>
+      </div>
     </div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <img src="https://media.licdn.com/dms/image/v2/D4D0BAQE23i6VMO9f5A/company-logo_100_100/company-logo_100_100/0/1719503508041?e=1750291200&v=beta&t=LILO_PbRnLE3LwtYlwlQfgQ0XGxQ4BYX8LPHnNAWDrA" alt="Logo MDAL" class="logo" />
-                <div class="brand-text">
-                    <h1>MDAL</h1>
-                    <p class="slogan">MAKE THE M</p>
-                </div>
-            </div>
-            
-            <div class="nav-menu" id="nav-menu">
-                <a href="#hero" class="nav-link">Início</a>
-                <a href="#camisetas" class="nav-link">Camisetas</a>
-                <a href="#acessorios" class="nav-link">Acessórios</a>
-                <a href="#planos" class="nav-link">Planos</a>
-                <a href="#musica" class="nav-link">Music</a>
-                <a href="#universo" class="nav-link">Universo MDAL</a>
-                <a href="#patrocinadores" class="nav-link">Patrocínios</a>
-                <a href="#carrinho" class="nav-link cart-link">
-                    <span class="cart-icon">🛒</span>
-                    Carrinho (<span id="cart-count">0</span>)
-                </a>
-            </div>
-
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <div class="nav-container">
+        <div class="nav-brand">
+          <img src="public/mdallogo.jpeg" alt="Logo MDAL" class="logo" />
+          <div class="brand-text">
+            <h1>MDAL</h1>
+            <p class="slogan">MAKE THE M</p>
+          </div>
         </div>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="#hero" class="nav-link">Início</a>
+          <a href="#camisetas" class="nav-link">Camisetas</a>
+          <a href="#acessorios" class="nav-link">Acessórios</a>
+          <a href="#planos" class="nav-link">Planos</a>
+          <a href="#musica" class="nav-link">Music</a>
+          <a href="#universo" class="nav-link">Universo MDAL</a>
+          <a href="#patrocinadores" class="nav-link">Patrocínios</a>
+          <a href="#carrinho" class="nav-link cart-link">
+            <span class="cart-icon">🛒</span>
+            Carrinho (<span id="cart-count">0</span>)
+          </a>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">MDAL</h1>
-                <p class="hero-subtitle">MAKE THE M</p>
-                <p class="hero-description">Estilo, qualidade e atitude em cada peça. Descubra o universo MDAL.</p>
-                <div class="hero-buttons">
-                    <a href="#camisetas" class="btn btn-primary">Ver Produtos</a>
-                    <a href="#musica" class="btn btn-secondary">Ouvir Música</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-image-container">
-                    <img src="https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg" alt="MDAL Collection" class="hero-image">
-                </div>
-            </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">MDAL</h1>
+          <p class="hero-subtitle">MAKE THE M</p>
+          <p class="hero-description">
+            Estilo, qualidade e atitude em cada peça. Descubra o universo MDAL.
+          </p>
+          <div class="hero-buttons">
+            <a href="#camisetas" class="btn btn-primary">Ver Produtos</a>
+            <a href="#musica" class="btn btn-secondary">Ouvir Música</a>
+          </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
+        <div class="hero-visual">
+          <div class="hero-image-container">
+            <img
+              src="https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg"
+              alt="MDAL Collection"
+              class="hero-image"
+            />
+          </div>
         </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
     </section>
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Products Section -->
-        <section id="camisetas" class="section products-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Camisetas</h2>
-                    <p class="section-subtitle">Peças exclusivas com design único</p>
-                </div>
-                
-                <div class="products-grid">
-                    <div class="product-card" data-aos="fade-up">
-                        <div class="product-image-container">
-                            <img src="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg" alt="Camiseta Black" class="product-image" />
-                            <div class="product-overlay">
-                                <button class="btn-quick-view">Visualização Rápida</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">MDAL Black Edition</h3>
-                            <p class="product-price">R$ 79,99</p>
-                            <button class="btn btn-primary comprar-btn"
-                                data-img="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg"
-                                data-nome="MDAL Black Edition"
-                                data-preco="79.99"  
-                                data-produto-type="camiseta">
-                                Comprar
-                            </button>
-                        </div>
-                    </div>
+      <!-- Products Section -->
+      <section id="camisetas" class="section products-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Camisetas</h2>
+            <p class="section-subtitle">Peças exclusivas com design único</p>
+          </div>
 
-                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="product-image-container">
-                            <img src="https://images.pexels.com/photos/8532617/pexels-photo-8532617.jpeg" alt="Camiseta White" class="product-image" />
-                            <div class="product-overlay">
-                                <button class="btn-quick-view">Visualização Rápida</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">MDAL White Classic</h3>
-                            <p class="product-price">R$ 79,99</p>
-                            <button class="btn btn-primary comprar-btn"
-                                data-img="https://images.pexels.com/photos/8532617/pexels-photo-8532617.jpeg"
-                                data-nome="MDAL White Classic"
-                                data-preco="79.99"
-                                data-produto-type="camiseta">
-                                Comprar
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="product-image-container">
-                            <img src="https://images.pexels.com/photos/8532618/pexels-photo-8532618.jpeg" alt="Camiseta Colorida" class="product-image" />
-                            <div class="product-overlay">
-                                <button class="btn-quick-view">Visualização Rápida</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">MDAL Color Collection</h3>
-                            <p class="product-price">R$ 69,99</p>
-                            <button class="btn btn-primary comprar-btn"
-                                data-img="https://images.pexels.com/photos/8532618/pexels-photo-8532618.jpeg"
-                                data-nome="MDAL Color Collection"
-                                data-preco="69.99"
-                                data-produto-type="camiseta">
-                                Comprar
-                            </button>
-                        </div>
-                    </div>
+          <div class="products-grid">
+            <div class="product-card" data-aos="fade-up">
+              <div class="product-image-container">
+                <img
+                  src="public/blackcole.jpeg"
+                  alt="Camiseta Black"
+                  class="product-image"
+                />
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Visualização Rápida</button>
                 </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">MDAL Black Edition</h3>
+                <p class="product-price">R$ 79,99</p>
+                <button
+                  class="btn btn-primary comprar-btn"
+                  data-img="public/blackcole.jpeg"
+                  data-nome="MDAL Black Edition"
+                  data-preco="79.99"
+                  data-produto-type="camiseta"
+                >
+                  Comprar
+                </button>
+              </div>
             </div>
-        </section>
 
-        <!-- Accessories Section -->
-        <section id="acessorios" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Acessórios</h2>
-                    <p class="section-subtitle">Complete seu look com nossos acessórios exclusivos</p>
+            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="product-image-container">
+                <img
+                  src="public/whiteedi.jpeg"
+                  alt="Camiseta White"
+                  class="product-image"
+                />
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Visualização Rápida</button>
                 </div>
-                
-                <div class="products-grid">
-                    <div class="product-card" data-aos="fade-up">
-                        <div class="product-image-container">
-                            <img src="https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg" alt="Boné" class="product-image" />
-                            <div class="product-overlay">
-                                <button class="btn-quick-view">Visualização Rápida</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Boné MDAL</h3>
-                            <p class="product-price">R$ 29,99</p>
-                            <button class="btn btn-primary comprar-btn"
-                                data-img="https://images.pexels.com/photos/1124465/pexels-photo-1124465.jpeg"
-                                data-nome="Boné MDAL"
-                                data-preco="29.99"
-                                data-produto-type="acessorio">
-                                Comprar
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="product-image-container">
-                            <img src="https://images.pexels.com/photos/6069112/pexels-photo-6069112.jpeg" alt="Cordinha" class="product-image" />
-                            <div class="product-overlay">
-                                <button class="btn-quick-view">Visualização Rápida</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Cordinha MDAL</h3>
-                            <p class="product-price">R$ 29,99</p>
-                            <button class="btn btn-primary comprar-btn"
-                                data-img="https://images.pexels.com/photos/6069112/pexels-photo-6069112.jpeg"
-                                data-nome="Cordinha MDAL"
-                                data-preco="29.99"
-                                data-produto-type="acessorio">
-                                Comprar
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="product-image-container">
-                            <img src="https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg" alt="Mochila" class="product-image" />
-                            <div class="product-overlay">
-                                <button class="btn-quick-view">Visualização Rápida</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Mochila MDAL</h3>
-                            <p class="product-price">R$ 89,99</p>
-                            <button class="btn btn-primary comprar-btn"
-                                data-img="https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg"
-                                data-nome="Mochila MDAL"
-                                data-preco="89.99"
-                                data-produto-type="acessorio">
-                                Comprar
-                            </button>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">MDAL White Classic</h3>
+                <p class="product-price">R$ 79,99</p>
+                <button
+                  class="btn btn-primary comprar-btn"
+                  data-img="public/whiteedi.jpeg"
+                  data-nome="MDAL White Classic"
+                  data-preco="79.99"
+                  data-produto-type="camiseta"
+                >
+                  Comprar
+                </button>
+              </div>
             </div>
-        </section>
 
-        <!-- Mystery Box Section -->
-        <section class="section mystery-box-section">
-            <div class="container">
-                <div class="mystery-box-content" data-aos="fade-up">
-                    <div class="mystery-box-image">
-                        <img src="https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg" alt="Box Mystery" />
-                    </div>
-                    <div class="mystery-box-info">
-                        <h2>📦 Box Mystery</h2>
-                        <p>Uma surpresa especial para os verdadeiros fãs da MDAL. Produtos exclusivos e itens colecionáveis em uma caixa misteriosa.</p>
-                        <div class="mystery-box-price">R$ 39,99</div>
-                        <button class="btn btn-primary comprar-btn"
-                            data-img="https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg"
-                            data-nome="Box Mystery"
-                            data-preco="39.99"
-                            data-produto-type="box">
-                            Comprar Agora
-                        </button>
-                    </div>
+            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="product-image-container">
+                <img
+                  src="public/black.jfif"
+                  alt="Camiseta Colorida"
+                  class="product-image"
+                />
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Visualização Rápida</button>
                 </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">MDAL Color Collection</h3>
+                <p class="product-price">R$ 69,99</p>
+                <button
+                  class="btn btn-primary comprar-btn"
+                  data-img="public/coleção mdal.jpeg"
+                  data-nome="MDAL Color Collection"
+                  data-preco="69.99"
+                  data-produto-type="camiseta"
+                >
+                  Comprar
+                </button>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Subscription Plans Section -->
-        <section id="planos" class="section plans-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Planos de Assinatura</h2>
-                    <p class="section-subtitle">Escolha o plano ideal para você</p>
+      <!-- Accessories Section -->
+      <section id="acessorios" class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Acessórios</h2>
+            <p class="section-subtitle">
+              Complete seu look com nossos acessórios exclusivos
+            </p>
+          </div>
+
+          <div class="products-grid">
+            <div class="product-card" data-aos="fade-up">
+              <div class="product-image-container">
+                <img src="public/bone.jpeg" alt="Boné" class="product-image" />
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Visualização Rápida</button>
                 </div>
-                
-                <div class="plans-grid">
-                    <div class="plan-card" data-aos="fade-up">
-                        <div class="plan-header">
-                            <div class="plan-emoji">🥉</div>
-                            <h3>Bronze</h3>
-                            <div class="plan-price">R$ 19,90<span>/mês</span></div>
-                        </div>
-                        <div class="plan-features">
-                            <ul>
-                                <li>Acesso básico aos produtos MDAL</li>
-                                <li>Camisa exclusiva após 6 meses</li>
-                                <li>Mimos selecionados</li>
-                            </ul>
-                        </div>
-                        <button class="btn btn-outline comprar-btn"
-                            data-nome="Plano Bronze"
-                            data-preco="19.90"
-                            data-produto-type="plano">
-                            Assinar
-                        </button>
-                    </div>
-
-                    <div class="plan-card featured" data-aos="fade-up" data-aos-delay="100">
-                        <div class="plan-badge">Mais Popular</div>
-                        <div class="plan-header">
-                            <div class="plan-emoji">🥈</div>
-                            <h3>Silver</h3>
-                            <div class="plan-price">R$ 29,90<span>/mês</span></div>
-                        </div>
-                        <div class="plan-features">
-                            <ul>
-                                <li>Tudo do Bronze</li>
-                                <li>Acessórios exclusivos</li>
-                                <li>Cartas para Card Game a cada 3 meses</li>
-                            </ul>
-                        </div>
-                        <button class="btn btn-primary comprar-btn"
-                            data-nome="Plano Silver"
-                            data-preco="29.90"
-                            data-produto-type="plano">
-                            Assinar
-                        </button>
-                    </div>
-
-                    <div class="plan-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="plan-header">
-                            <div class="plan-emoji">🥇</div>
-                            <h3>Gold</h3>
-                            <div class="plan-price">R$ 39,90<span>/mês</span></div>
-                        </div>
-                        <div class="plan-features">
-                            <ul>
-                                <li>Tudo do Silver</li>
-                                <li>Camiseta exclusiva a cada 3 meses</li>
-                                <li>Convites para grupos MDAL</li>
-                            </ul>
-                        </div>
-                        <button class="btn btn-outline comprar-btn"
-                            data-nome="Plano Gold"
-                            data-preco="39.90"
-                            data-produto-type="plano">
-                            Assinar
-                        </button>
-                    </div>
-
-                    <div class="plan-card premium" data-aos="fade-up" data-aos-delay="300">
-                        <div class="plan-badge">Premium</div>
-                        <div class="plan-header">
-                            <div class="plan-emoji">💎</div>
-                            <h3>Diamond</h3>
-                            <div class="plan-price">R$ 49,90<span>/mês</span></div>
-                        </div>
-                        <div class="plan-features">
-                            <ul>
-                                <li>Tudo do Gold</li>
-                                <li>Caixa misteriosa especial todo mês</li>
-                                <li>Acesso VIP a lançamentos</li>
-                            </ul>
-                        </div>
-                        <button class="btn btn-primary comprar-btn"
-                            data-nome="Plano Diamond"
-                            data-preco="49.90"
-                            data-produto-type="plano">
-                            Assinar
-                        </button>
-                    </div>
-                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Boné MDAL</h3>
+                <p class="product-price">R$ 29,99</p>
+                <button
+                  class="btn btn-primary comprar-btn"
+                  data-img="public/bone.jpeg"
+                  data-nome="Boné MDAL"
+                  data-preco="29.99"
+                  data-produto-type="acessorio"
+                >
+                  Comprar
+                </button>
+              </div>
             </div>
-        </section>
 
-        <!-- Music Section -->
-        <section id="musica" class="section music-section">
-            <div class="container">
-                <div class="music-content" data-aos="fade-up">
-                    <div class="music-video">
-                        <div class="video-container">
-                            <iframe 
-                                src="https://www.youtube.com/embed/jtw-tiSSww8" 
-                                title="MAKE THE M - MDAL" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-                    <div class="music-info">
-                        <h2>🎵 MAKE THE M</h2>
-                        <div class="music-details">
-                            <p>• A música Make The M foi lançada no dia 29/06/2024.</p>
-                            <p>• A música fala sobre os MDAL e eu Masuke Death A Lenda!</p>
-                            <p>• Gostaria do apoio de todos para a reprodução dentro das plataformas digitais, principalmente dentro do Spotify, para termos um alcance notável.</p>
-                            <p>• A voz é do @Alefziin, produzida por ele. Gostaria de solicitar o apoio em nome de todos os MDAL's.</p>
-                        </div>
-                        <div class="music-buttons">
-                            <a href="https://open.spotify.com/track/1XHUcifecZmGEpNaiaeR5A?si=gBjtINHaRVaMIa7QG027RA&context=spotify%3Aalbum%3A3Xc3xqXCzWYcJsQfvfKFQH" target="_blank" class="btn btn-spotify">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/>
-                                </svg>
-                                Escute no Spotify
-                            </a>
-                            <a href="https://www.youtube.com/watch?v=jtw-tiSSww8" target="_blank" class="btn btn-youtube">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                </svg>
-                                Ver no YouTube
-                            </a>
-                        </div>
-                    </div>
+            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="product-image-container">
+                <img
+                  src="public/cordinha.jpeg"
+                  alt="Cordinha"
+                  class="product-image"
+                />
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Visualização Rápida</button>
                 </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Cordinha MDAL</h3>
+                <p class="product-price">R$ 29,99</p>
+                <button
+                  class="btn btn-primary comprar-btn"
+                  data-img="public/cordinhas.jpeg"
+                  data-nome="Cordinha MDAL"
+                  data-preco="29.99"
+                  data-produto-type="acessorio"
+                >
+                  Comprar
+                </button>
+              </div>
             </div>
-        </section>
 
-        <!-- MDAL Universe Section -->
-        <section id="universo" class="section universe-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">🌌 Universo MDAL</h2>
-                    <p class="section-subtitle">Explore todos os projetos do universo MDAL</p>
+            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="product-image-container">
+                <img
+                  src="public/mochila.jpeg"
+                  alt="Mochila"
+                  class="product-image"
+                />
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Visualização Rápida</button>
                 </div>
-                
-                <div class="universe-grid">
-                    <div class="universe-card" data-aos="fade-up">
-                        <div class="universe-image">
-                            <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg" alt="Mangá MDAL">
-                        </div>
-                        <div class="universe-info">
-                            <h3>📚 Mangá MDAL</h3>
-                            <p>As Crônicas de Masuke - Mergulhe na história épica do universo MDAL através do nosso mangá oficial.</p>
-                            <a href="https://masukemdal.github.io/MangaMDAL/" target="_blank" class="btn btn-primary">
-                                Ler Mangá
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="universe-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="universe-image">
-                            <img src="https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg" alt="MDAL Burguer">
-                        </div>
-                        <div class="universe-info">
-                            <h3>🍔 MDAL Burguer</h3>
-                            <p>Saboreie os melhores hambúrguers do universo MDAL. Qualidade e sabor únicos!</p>
-                            <a href="https://masukemdal.github.io/mdalburguer/" target="_blank" class="btn btn-primary">
-                                Ver Cardápio
-                            </a>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Mochila MDAL</h3>
+                <p class="product-price">R$ 89,99</p>
+                <button
+                  class="btn btn-primary comprar-btn"
+                  data-img="public/mochila.jpeg"
+                  data-nome="Mochila MDAL"
+                  data-preco="89.99"
+                  data-produto-type="acessorio"
+                >
+                  Comprar
+                </button>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Sponsors Section -->
-        <section id="patrocinadores" class="section sponsors-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">🤝 Patrocinadores</h2>
-                    <p class="section-subtitle">Agradecemos enormemente aos nossos patrocinadores pela confiança e oportunidade de trabalhar juntos!</p>
-                </div>
-                
-                <div class="sponsors-grid">
-                    <div class="sponsor-card" data-aos="fade-up">
-                        <img src="https://media.licdn.com/dms/image/v2/D4D22AQF54ukUdD0JMg/feedshare-shrink_2048_1536/B4DZanDQMbGcAo-/0/1746559370484?e=1749686400&v=beta&t=1f8QiEdw80JbXXSGp86FwKushk_YZ7PMKMqHbIziEgE" alt="DANTE Acessórios">
-                        <div class="sponsor-name">@danteacessórios</div>
-                    </div>
-                    <div class="sponsor-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://media.licdn.com/dms/image/v2/D4D22AQFBi2gX12zogw/feedshare-shrink_1280/B4DZanDQMkG4Ak-/0/1746559370499?e=1749686400&v=beta&t=mgkJAxAvpB1T4R4bRfMorFP5GVabz8xJR8YPIK4O9Q8" alt="Forst">
-                        <div class="sponsor-name">@Forst</div>
-                    </div>
-                    <div class="sponsor-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="https://media.licdn.com/dms/image/v2/D4D22AQEk2dk0agfrDA/feedshare-shrink_2048_1536/B4DZanDQM5HEAs-/0/1746559370495?e=1749686400&v=beta&t=hs6K8OliB0XGscGMZTH4unZCfGGpKJerEMz7-y4D9mw" alt="FATTI Arquitetura">
-                        <div class="sponsor-name">@fatti.arquitetura</div>
-                    </div>
-                    <div class="sponsor-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="https://media.licdn.com/dms/image/v2/D4D22AQENMCSo23qx3w/feedshare-shrink_1280/B4DZanDQMyHwAk-/0/1746559370522?e=1749686400&v=beta&t=RgSLUvFOur-0woorZXZ3wGfccfpiOei9t3kosQY-ihg" alt="UNIAO SPORTS">
-                        <div class="sponsor-name">@oficialuniaosports</div>
-                    </div>
-                    <div class="sponsor-card" data-aos="fade-up" data-aos-delay="400">
-                        <img src="https://media.licdn.com/dms/image/v2/D4D22AQEltS6QC_ApNA/feedshare-shrink_2048_1536/B4DZanDQNNG8Ao-/0/1746559370538?e=1749686400&v=beta&t=tUzJUZEk4wqEM5b0fmKmKAnmvWpHsKgdyeYg-nZ9eck" alt="MDAL BURGUER">
-                        <div class="sponsor-name">@Mdalburguer</div>
-                    </div>
-                </div>
-                
-                <div class="contact-info" data-aos="fade-up">
-                    <h3>💼 Quer ser nosso patrocinador?</h3>
-                    <p>Entre em contato conosco e faça parte do universo MDAL!</p>
-                    <div class="contact-buttons">
-                        <a href="mailto:matheusmarquesferreira@hotmail.com" class="btn btn-primary">
-                            📧 Enviar Email
-                        </a>
-                        <a href="https://wa.me/5534998829396?text=Olá! Gostaria de saber mais sobre patrocínio da MDAL" target="_blank" class="btn btn-whatsapp">
-                            📱 WhatsApp
-                        </a>
-                    </div>
-                </div>
+      <!-- Mystery Box Section -->
+      <section class="section mystery-box-section">
+        <div class="container">
+          <div class="mystery-box-content" data-aos="fade-up">
+            <div class="mystery-box-image">
+              <img src="public/Box.webp" alt="Box Mystery" />
             </div>
-        </section>
+            <div class="mystery-box-info">
+              <h2>📦 Box Mystery</h2>
+              <p>
+                Uma surpresa especial para os verdadeiros fãs da MDAL. Produtos
+                exclusivos e itens colecionáveis em uma caixa misteriosa.
+              </p>
+              <div class="mystery-box-price">R$ 39,99</div>
+              <button
+                class="btn btn-primary comprar-btn"
+                data-img="public/Box.webp"
+                data-nome="Box Mystery"
+                data-preco="39.99"
+                data-produto-type="box"
+              >
+                Comprar Agora
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Cart Section -->
-        <section id="carrinho" class="section cart-section">
-            <div class="container">
-                <div class="cart-content">
-                    <h2>🛒 Carrinho de Compras (<span id="cart-item-count">0</span>)</h2>
-                    <div class="cart-items-container">
-                        <ul id="cart-items"></ul>
-                        <div id="cart-total">Total: R$ 0,00</div>
-                    </div>
-                    
-                    <div class="checkout-options">
-                        <button class="btn btn-whatsapp" id="btn-checkout-whatsapp">
-                            📱 Finalizar pelo WhatsApp
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- Subscription Plans Section -->
+      <section id="planos" class="section plans-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Planos de Assinatura</h2>
+            <p class="section-subtitle">Escolha o plano ideal para você</p>
+          </div>
 
-        <!-- Hall of Fame Section -->
-        <section class="section hall-of-fame-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">🏆 Hall da Fama MDAL</h2>
-                    <p class="section-subtitle">Um agradecimento especial a todos os assinantes e grandes apoiadores da MDAL!</p>
-                </div>
-                
-                <div id="hall-da-fama-container" class="hall-of-fame-grid"></div>
+          <div class="plans-grid">
+            <div class="plan-card" data-aos="fade-up">
+              <div class="plan-header">
+                <div class="plan-emoji">🥉</div>
+                <h3>Bronze</h3>
+                <div class="plan-price">R$ 19,90<span>/mês</span></div>
+              </div>
+              <div class="plan-features">
+                <ul>
+                  <li>Acesso básico aos produtos MDAL</li>
+                  <li>Camisa exclusiva após 6 meses</li>
+                  <li>Mimos selecionados</li>
+                </ul>
+              </div>
+              <button
+                class="btn btn-outline comprar-btn"
+                data-nome="Plano Bronze"
+                data-preco="19.90"
+                data-produto-type="plano"
+              >
+                Assinar
+              </button>
             </div>
-        </section>
 
-        <!-- About Section -->
-        <section class="section about-section">
-            <div class="container">
-                <div class="about-content" data-aos="fade-up">
-                    <h2>ℹ️ Sobre a MDAL</h2>
-                    <p>A MDAL é uma marca de roupas e acessórios que se dedica a oferecer produtos de alta qualidade, com um design exclusivo e moderno. Nossa missão é proporcionar estilo e conforto para todas as ocasiões. Trabalhamos com paixão e compromisso para criar peças que refletem a essência da moda contemporânea.</p>
-                </div>
+            <div
+              class="plan-card featured"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="plan-badge">Mais Popular</div>
+              <div class="plan-header">
+                <div class="plan-emoji">🥈</div>
+                <h3>Silver</h3>
+                <div class="plan-price">R$ 29,90<span>/mês</span></div>
+              </div>
+              <div class="plan-features">
+                <ul>
+                  <li>Tudo do Bronze</li>
+                  <li>Acessórios exclusivos</li>
+                  <li>Cartas para Card Game a cada 3 meses</li>
+                </ul>
+              </div>
+              <button
+                class="btn btn-primary comprar-btn"
+                data-nome="Plano Silver"
+                data-preco="29.90"
+                data-produto-type="plano"
+              >
+                Assinar
+              </button>
             </div>
-        </section>
+
+            <div class="plan-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="plan-header">
+                <div class="plan-emoji">🥇</div>
+                <h3>Gold</h3>
+                <div class="plan-price">R$ 39,90<span>/mês</span></div>
+              </div>
+              <div class="plan-features">
+                <ul>
+                  <li>Tudo do Silver</li>
+                  <li>Camiseta exclusiva a cada 3 meses</li>
+                  <li>Convites para grupos MDAL</li>
+                </ul>
+              </div>
+              <button
+                class="btn btn-outline comprar-btn"
+                data-nome="Plano Gold"
+                data-preco="39.90"
+                data-produto-type="plano"
+              >
+                Assinar
+              </button>
+            </div>
+
+            <div
+              class="plan-card premium"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="plan-badge">Premium</div>
+              <div class="plan-header">
+                <div class="plan-emoji">💎</div>
+                <h3>Diamond</h3>
+                <div class="plan-price">R$ 49,90<span>/mês</span></div>
+              </div>
+              <div class="plan-features">
+                <ul>
+                  <li>Tudo do Gold</li>
+                  <li>Caixa misteriosa especial todo mês</li>
+                  <li>Acesso VIP a lançamentos</li>
+                </ul>
+              </div>
+              <button
+                class="btn btn-primary comprar-btn"
+                data-nome="Plano Diamond"
+                data-preco="49.90"
+                data-produto-type="plano"
+              >
+                Assinar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Music Section -->
+      <section id="musica" class="section music-section">
+        <div class="container">
+          <div class="music-content" data-aos="fade-up">
+            <div class="music-video">
+              <div class="video-container">
+                <iframe
+                  src="https://www.youtube.com/embed/jtw-tiSSww8"
+                  title="MAKE THE M - MDAL"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+            </div>
+            <div class="music-info">
+              <h2>🎵 MAKE THE M</h2>
+              <div class="music-details">
+                <p>• A música Make The M foi lançada no dia 29/06/2024.</p>
+                <p>• A música fala sobre os MDAL e eu Masuke Death A Lenda!</p>
+                <p>
+                  • Gostaria do apoio de todos para a reprodução dentro das
+                  plataformas digitais, principalmente dentro do Spotify, para
+                  termos um alcance notável.
+                </p>
+                <p>
+                  • A voz é do @Alefziin, produzida por ele. Gostaria de
+                  solicitar o apoio em nome de todos os MDAL's.
+                </p>
+              </div>
+              <div class="music-buttons">
+                <a
+                  href="https://open.spotify.com/track/1XHUcifecZmGEpNaiaeR5A?si=gBjtINHaRVaMIa7QG027RA&context=spotify%3Aalbum%3A3Xc3xqXCzWYcJsQfvfKFQH"
+                  target="_blank"
+                  class="btn btn-spotify"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"
+                    />
+                  </svg>
+                  Escute no Spotify
+                </a>
+                <a
+                  href="https://www.youtube.com/watch?v=jtw-tiSSww8"
+                  target="_blank"
+                  class="btn btn-youtube"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                    />
+                  </svg>
+                  Ver no YouTube
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MDAL Universe Section -->
+      <section id="universo" class="section universe-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">🌌 Universo MDAL</h2>
+            <p class="section-subtitle">
+              Explore todos os projetos do universo MDAL
+            </p>
+          </div>
+
+          <div class="universe-grid">
+            <div class="universe-card" data-aos="fade-up">
+              <div class="universe-image">
+                <img src="public/Masuke.jpeg" alt="Mangá MDAL" />
+              </div>
+              <div class="universe-info">
+                <h3>📚 Mangá MDAL</h3>
+                <p>
+                  As Crônicas de Masuke - Mergulhe na história épica do universo
+                  MDAL através do nosso mangá oficial.
+                </p>
+                <a
+                  href="https://masukemdal.github.io/MangaMDAL/"
+                  target="_blank"
+                  class="btn btn-primary"
+                >
+                  Ler Mangá
+                </a>
+              </div>
+            </div>
+
+            <div class="universe-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="universe-image">
+                <img src="public/burg.jpeg" alt="MDAL Burguer" />
+              </div>
+              <div class="universe-info">
+                <h3>🍔 MDAL Burguer</h3>
+                <p>
+                  Saboreie os melhores hambúrguers do universo MDAL. Qualidade e
+                  sabor únicos!
+                </p>
+                <a
+                  href="https://masukemdal.github.io/mdalburguer/"
+                  target="_blank"
+                  class="btn btn-primary"
+                >
+                  Ver Cardápio
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sponsors Section -->
+      <section id="patrocinadores" class="section sponsors-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">🤝 Patrocinadores</h2>
+            <p class="section-subtitle">
+              Agradecemos enormemente aos nossos patrocinadores pela confiança e
+              oportunidade de trabalhar juntos!
+            </p>
+          </div>
+
+          <div class="sponsors-grid">
+            <div class="sponsor-card" data-aos="fade-up">
+              <img src="public/dante.jfif" alt="DANTE Acessórios" />
+              <div class="sponsor-name">@danteacessórios</div>
+            </div>
+            <div class="sponsor-card" data-aos="fade-up" data-aos-delay="100">
+              <img src="public/forst.jfif" alt="Forst" />
+              <div class="sponsor-name">@Forst</div>
+            </div>
+            <div class="sponsor-card" data-aos="fade-up" data-aos-delay="200">
+              <img src="public/fatt.jfif" alt="FATTI Arquitetura" />
+              <div class="sponsor-name">@fatti.arquitetura</div>
+            </div>
+            <div class="sponsor-card" data-aos="fade-up" data-aos-delay="300">
+              <img src="public/uniao.jfif" alt="UNIAO SPORTS" />
+              <div class="sponsor-name">@oficialuniaosports</div>
+            </div>
+            <div class="sponsor-card" data-aos="fade-up" data-aos-delay="400">
+              <img src="public/mdalburglogo.jpeg" alt="MDAL BURGUER" />
+              <div class="sponsor-name">@Mdalburguer</div>
+            </div>
+          </div>
+
+          <div class="contact-info" data-aos="fade-up">
+            <h3>💼 Quer ser nosso patrocinador?</h3>
+            <p>Entre em contato conosco e faça parte do universo MDAL!</p>
+            <div class="contact-buttons">
+              <a
+                href="mailto:matheusmarquesferreira@hotmail.com"
+                class="btn btn-primary"
+              >
+                📧 Enviar Email
+              </a>
+              <a
+                href="https://wa.me/5534998829396?text=Olá! Gostaria de saber mais sobre patrocínio da MDAL"
+                target="_blank"
+                class="btn btn-whatsapp"
+              >
+                📱 WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cart Section -->
+      <section id="carrinho" class="section cart-section">
+        <div class="container">
+          <div class="cart-content">
+            <h2>
+              🛒 Carrinho de Compras (<span id="cart-item-count">0</span>)
+            </h2>
+            <div class="cart-items-container">
+              <ul id="cart-items"></ul>
+              <div id="cart-total">Total: R$ 0,00</div>
+            </div>
+
+            <div class="checkout-options">
+              <button class="btn btn-whatsapp" id="btn-checkout-whatsapp">
+                📱 Finalizar pelo WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hall of Fame Section -->
+      <section class="section hall-of-fame-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">🏆 Hall da Fama MDAL</h2>
+            <p class="section-subtitle">
+              Um agradecimento especial a todos os assinantes e grandes
+              apoiadores da MDAL!
+            </p>
+          </div>
+
+          <div id="hall-da-fama-container" class="hall-of-fame-grid"></div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="section about-section">
+        <div class="container">
+          <div class="about-content" data-aos="fade-up">
+            <h2>ℹ️ Sobre a MDAL</h2>
+            <p>
+              A MDAL é uma marca de roupas e acessórios que se dedica a oferecer
+              produtos de alta qualidade, com um design exclusivo e moderno.
+              Nossa missão é proporcionar estilo e conforto para todas as
+              ocasiões. Trabalhamos com paixão e compromisso para criar peças
+              que refletem a essência da moda contemporânea.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>MDAL</h3>
-                    <p>MAKE THE M</p>
-                    <div class="social-links">
-                        <a href="https://github.com/masukemdal" target="_blank" title="GitHub">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                        <a href="https://instagram.com/masukemdal" target="_blank" title="Instagram">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                        <a href="https://linkedin.com/in/masukemdal" target="_blank" title="LinkedIn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                        <a href="https://facebook.com/masukemdal" target="_blank" title="Facebook">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Produtos</h4>
-                        <a href="#camisetas">Camisetas</a>
-                        <a href="#acessorios">Acessórios</a>
-                        <a href="#planos">Planos</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Universo MDAL</h4>
-                        <a href="https://masukemdal.github.io/MangaMDAL/" target="_blank">Mangá MDAL</a>
-                        <a href="https://masukemdal.github.io/mdalburguer/" target="_blank">MDAL Burguer</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Contato</h4>
-                        <a href="mailto:matheusmarquesferreira@hotmail.com">Email</a>
-                        <a href="https://wa.me/5534998829396" target="_blank">WhatsApp</a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>MDAL</h3>
+            <p>MAKE THE M</p>
+            <div class="social-links">
+              <a
+                href="https://github.com/masukemdal"
+                target="_blank"
+                title="GitHub"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://instagram.com/masukemdal"
+                target="_blank"
+                title="Instagram"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/in/masukemdal"
+                target="_blank"
+                title="LinkedIn"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://facebook.com/masukemdal"
+                target="_blank"
+                title="Facebook"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
             </div>
-            <div class="footer-bottom">
-                <p>© 2024 MDAL. Todos os direitos reservados.</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Produtos</h4>
+              <a href="#camisetas">Camisetas</a>
+              <a href="#acessorios">Acessórios</a>
+              <a href="#planos">Planos</a>
             </div>
+            <div class="footer-column">
+              <h4>Universo MDAL</h4>
+              <a href="https://masukemdal.github.io/MangaMDAL/" target="_blank"
+                >Mangá MDAL</a
+              >
+              <a
+                href="https://masukemdal.github.io/mdalburguer/"
+                target="_blank"
+                >MDAL Burguer</a
+              >
+            </div>
+            <div class="footer-column">
+              <h4>Contato</h4>
+              <a href="mailto:matheusmarquesferreira@hotmail.com">Email</a>
+              <a href="https://wa.me/5534998829396" target="_blank">WhatsApp</a>
+            </div>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>© 2024 MDAL. Todos os direitos reservados.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Modals -->
     <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="modal-close">×</span>
-            <h2 id="modal-titulo"></h2>
-            
-            <div class="modal-img-container">
-                <img id="modal-img" src="" alt="">
-                <button class="modal-nav-btn prev" id="modal-prev-img">❮</button>
-                <button class="modal-nav-btn next" id="modal-next-img">❯</button>
-            </div>
-            
-            <p id="modal-preco"></p>
-            
-            <div class="size-selector" id="modal-size-selector">
-                <label for="product-size">Tamanho:</label>
-                <select id="product-size">
-                    <option value="">Selecione o Tamanho</option>
-                    <option value="P">P</option>
-                    <option value="M">M</option>
-                    <option value="G">G</option>
-                    <option value="GG">GG</option>
-                    <option value="XG">XG</option>
-                    <option value="Babylook P">Babylook P</option>
-                    <option value="Babylook M">Babylook M</option>
-                    <option value="Babylook G">Babylook G</option>
-                </select>
-            </div>
-            
-            <h3>📱 Finalização:</h3>
-            <p>Após adicionar ao carrinho, finalize pelo WhatsApp para definirmos a forma de pagamento.</p>
-            
-            <button class="btn btn-primary add-to-cart-btn">Adicionar ao Carrinho</button>
+      <div class="modal-content">
+        <span class="close" id="modal-close">×</span>
+        <h2 id="modal-titulo"></h2>
+
+        <div class="modal-img-container">
+          <img id="modal-img" src="" alt="" />
+          <button class="modal-nav-btn prev" id="modal-prev-img">❮</button>
+          <button class="modal-nav-btn next" id="modal-next-img">❯</button>
         </div>
+
+        <p id="modal-preco"></p>
+
+        <div class="size-selector" id="modal-size-selector">
+          <label for="product-size">Tamanho:</label>
+          <select id="product-size">
+            <option value="">Selecione o Tamanho</option>
+            <option value="P">P</option>
+            <option value="M">M</option>
+            <option value="G">G</option>
+            <option value="GG">GG</option>
+            <option value="XG">XG</option>
+            <option value="Babylook P">Babylook P</option>
+            <option value="Babylook M">Babylook M</option>
+            <option value="Babylook G">Babylook G</option>
+          </select>
+        </div>
+
+        <h3>📱 Finalização:</h3>
+        <p>
+          Após adicionar ao carrinho, finalize pelo WhatsApp para definirmos a
+          forma de pagamento.
+        </p>
+
+        <button class="btn btn-primary add-to-cart-btn">
+          Adicionar ao Carrinho
+        </button>
+      </div>
     </div>
 
     <div id="image-modal" class="modal">
-        <div class="modal-content image-modal-content">
-            <span class="close" id="image-modal-close">×</span>
-            <img src="" alt="Imagem Ampliada" id="expanded-image">
-        </div>
+      <div class="modal-content image-modal-content">
+        <span class="close" id="image-modal-close">×</span>
+        <img src="" alt="Imagem Ampliada" id="expanded-image" />
+      </div>
     </div>
 
     <div id="member-modal" class="modal">
-        <div class="modal-content member-modal-content">
-            <span class="close" id="member-modal-close">×</span>
-            <div class="member-info">
-                <img id="member-photo" src="" alt="Foto do Membro">
-                <h3 id="member-name"></h3>
-                <p id="member-description"></p>
-            </div>
+      <div class="modal-content member-modal-content">
+        <span class="close" id="member-modal-close">×</span>
+        <div class="member-info">
+          <img id="member-photo" src="" alt="Foto do Membro" />
+          <h3 id="member-name"></h3>
+          <p id="member-description"></p>
         </div>
+      </div>
     </div>
 
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/modals.js"></script>
     <script src="js/animations.js"></script>
-</body>
+  </body>
 </html>
