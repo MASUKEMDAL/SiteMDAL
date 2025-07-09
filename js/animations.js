@@ -244,8 +244,8 @@ class AnimationManager {
             { 
                 nome: "Cabeça", 
                 foto: "https://media.licdn.com/dms/image/v2/D4D03AQFrREvxfyYfpA/profile-displayphoto-shrink_800_800/B4DZZuMX1pHIAc-/0/1745605459846?e=1752105600&v=beta&t=BoSV7zO88aZ5bjNEod8kUGKaA_7VrdPlTLj6fdRjaZk"
-            }
-            { 
+            },
+            {
                 nome: "Buya", 
                 foto: "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg"
             },
@@ -254,7 +254,7 @@ class AnimationManager {
                 foto: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg"
             },
             { 
-                nome: "Garigas (O cantor gostoso)", 
+                nome: "Garigas", 
                 foto: "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg"
             },
             { 
