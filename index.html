@@ -71,11 +71,56 @@
         </div>
         <div class="hero-visual">
           <div class="hero-image-container">
-            <img
-              src="https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg"
-              alt="MDAL Collection"
-              class="hero-image"
-            />
+            <div class="hero-carousel">
+              <div class="carousel-container">
+                <div class="carousel-slide active">
+                  <img src="https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg" alt="MDAL Team 1" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg" alt="MDAL Team 2" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg" alt="MDAL Team 3" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg" alt="MDAL Team 4" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg" alt="MDAL Team 5" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg" alt="MDAL Team 6" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg" alt="MDAL Team 7" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://images.pexels.com/photos/1040879/pexels-photo-1040879.jpeg" alt="MDAL Team 8" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://images.pexels.com/photos/1043472/pexels-photo-1043472.jpeg" alt="MDAL Team 9" />
+                </div>
+                <div class="carousel-slide">
+                  <img src="https://images.pexels.com/photos/1040878/pexels-photo-1040878.jpeg" alt="MDAL Team 10" />
+                </div>
+              </div>
+              
+              <button class="carousel-btn prev" id="carousel-prev">❮</button>
+              <button class="carousel-btn next" id="carousel-next">❯</button>
+              
+              <div class="carousel-indicators">
+                <span class="indicator active" data-slide="0"></span>
+                <span class="indicator" data-slide="1"></span>
+                <span class="indicator" data-slide="2"></span>
+                <span class="indicator" data-slide="3"></span>
+                <span class="indicator" data-slide="4"></span>
+                <span class="indicator" data-slide="5"></span>
+                <span class="indicator" data-slide="6"></span>
+                <span class="indicator" data-slide="7"></span>
+                <span class="indicator" data-slide="8"></span>
+                <span class="indicator" data-slide="9"></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -167,6 +212,58 @@
                   data-nome="MDAL Color Collection"
                   data-preco="69.99"
                   data-produto-type="camiseta"
+                >
+                  Comprar
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="product-image-container">
+                <img
+                  src="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg"
+                  alt="Moleton MDAL"
+                  class="product-image"
+                />
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Visualização Rápida</button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Moleton MDAL</h3>
+                <p class="product-price">R$ 129,99</p>
+                <button
+                  class="btn btn-primary comprar-btn"
+                  data-img="https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg"
+                  data-nome="Moleton MDAL"
+                  data-preco="129.99"
+                  data-produto-type="camiseta"
+                >
+                  Comprar
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="product-image-container">
+                <img
+                  src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg"
+                  alt="Jordan MDAL"
+                  class="product-image"
+                />
+                <div class="product-overlay">
+                  <button class="btn-quick-view">Visualização Rápida</button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-name">Jordan MDAL</h3>
+                <p class="product-price">R$ 299,99</p>
+                <button
+                  class="btn btn-primary comprar-btn"
+                  data-img="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg"
+                  data-nome="Jordan MDAL"
+                  data-preco="299.99"
+                  data-produto-type="acessorio"
                 >
                   Comprar
                 </button>
@@ -545,24 +642,54 @@
 
           <div class="sponsors-grid">
             <div class="sponsor-card" data-aos="fade-up">
-              <img src="public/dante.jfif" alt="DANTE Acessórios" />
-              <div class="sponsor-name">@danteacessórios</div>
+              <div class="sponsor-logo">
+                <img src="public/dante.jfif" alt="DANTE Acessórios" />
+              </div>
+              <div class="sponsor-info">
+                <h4 class="sponsor-name">DANTE Acessórios</h4>
+                <p class="sponsor-handle">@danteacessórios</p>
+                <p class="sponsor-description">Acessórios de qualidade premium para o seu estilo único</p>
+              </div>
             </div>
             <div class="sponsor-card" data-aos="fade-up" data-aos-delay="100">
-              <img src="public/forst.jfif" alt="Forst" />
-              <div class="sponsor-name">@Forst</div>
+              <div class="sponsor-logo">
+                <img src="public/forst.jfif" alt="Forst" />
+              </div>
+              <div class="sponsor-info">
+                <h4 class="sponsor-name">Forst</h4>
+                <p class="sponsor-handle">@Forst</p>
+                <p class="sponsor-description">Inovação e tecnologia em cada produto</p>
+              </div>
             </div>
             <div class="sponsor-card" data-aos="fade-up" data-aos-delay="200">
-              <img src="public/fatt.jfif" alt="FATTI Arquitetura" />
-              <div class="sponsor-name">@fatti.arquitetura</div>
+              <div class="sponsor-logo">
+                <img src="public/fatt.jfif" alt="FATTI Arquitetura" />
+              </div>
+              <div class="sponsor-info">
+                <h4 class="sponsor-name">FATTI Arquitetura</h4>
+                <p class="sponsor-handle">@fatti.arquitetura</p>
+                <p class="sponsor-description">Projetos arquitetônicos modernos e funcionais</p>
+              </div>
             </div>
             <div class="sponsor-card" data-aos="fade-up" data-aos-delay="300">
-              <img src="public/uniao.jfif" alt="UNIAO SPORTS" />
-              <div class="sponsor-name">@oficialuniaosports</div>
+              <div class="sponsor-logo">
+                <img src="public/uniao.jfif" alt="UNIAO SPORTS" />
+              </div>
+              <div class="sponsor-info">
+                <h4 class="sponsor-name">UNIÃO SPORTS</h4>
+                <p class="sponsor-handle">@oficialuniaosports</p>
+                <p class="sponsor-description">Equipamentos esportivos de alta performance</p>
+              </div>
             </div>
             <div class="sponsor-card" data-aos="fade-up" data-aos-delay="400">
-              <img src="public/mdalburglogo.jpeg" alt="MDAL BURGUER" />
-              <div class="sponsor-name">@Mdalburguer</div>
+              <div class="sponsor-logo">
+                <img src="public/mdalburglogo.jpeg" alt="MDAL BURGUER" />
+              </div>
+              <div class="sponsor-info">
+                <h4 class="sponsor-name">MDAL BURGUER</h4>
+                <p class="sponsor-handle">@Mdalburguer</p>
+                <p class="sponsor-description">Os melhores hambúrguers do universo MDAL</p>
+              </div>
             </div>
           </div>
 

@@ -242,7 +242,14 @@ class ModalManager {
             "Leitinho": "Membro carismático e divertido, Leitinho traz alegria e descontração para a comunidade MDAL.",
             "Laurão": "Líder natural e estrategista, Laurão ajuda a guiar a MDAL em direção ao sucesso e crescimento.",
             "Kaminari": "Energético como um raio, Kaminari traz dinamismo e velocidade para todos os projetos da MDAL.",
-            "Cabeça": "Pensador e filósofo do grupo, Cabeça sempre tem uma perspectiva interessante sobre os desafios da MDAL."
+            "Cabeça": "Pensador e filósofo do grupo, Cabeça sempre tem uma perspectiva interessante sobre os desafios da MDAL.",
+            "Buya": "Membro criativo e inovador, Buya traz novas ideias e perspectivas frescas para a comunidade MDAL.",
+            "Lemes": "Dedicado e confiável, Lemes é sempre presente nos momentos importantes da MDAL.",
+            "Garigas (O cantor gostoso)": "Talento musical excepcional, Garigas encanta a todos com sua voz e carisma únicos.",
+            "Guys": "Membro versátil e adaptável, Guys contribui em diversas áreas do universo MDAL.",
+            "Paixão": "Com energia contagiante, Paixão inspira todos ao seu redor na comunidade MDAL.",
+            "Luan": "Estratégico e analítico, Luan ajuda a tomar as melhores decisões para o crescimento da MDAL.",
+            "Vinicin": "Jovem talento em ascensão, Vinicin representa o futuro promissor da comunidade MDAL."
         };
 
         return descriptions[memberName] || "Membro valioso da comunidade MDAL, contribuindo para o crescimento e sucesso do grupo.";

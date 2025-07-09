@@ -245,6 +245,34 @@ class AnimationManager {
                 nome: "Cabeça", 
                 foto: "https://media.licdn.com/dms/image/v2/D4D03AQFrREvxfyYfpA/profile-displayphoto-shrink_800_800/B4DZZuMX1pHIAc-/0/1745605459846?e=1752105600&v=beta&t=BoSV7zO88aZ5bjNEod8kUGKaA_7VrdPlTLj6fdRjaZk"
             }
+            { 
+                nome: "Buya", 
+                foto: "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg"
+            },
+            { 
+                nome: "Lemes", 
+                foto: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg"
+            },
+            { 
+                nome: "Garigas (O cantor gostoso)", 
+                foto: "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg"
+            },
+            { 
+                nome: "Guys", 
+                foto: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg"
+            },
+            { 
+                nome: "Paixão", 
+                foto: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg"
+            },
+            { 
+                nome: "Luan", 
+                foto: "https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg"
+            },
+            { 
+                nome: "Vinicin", 
+                foto: "https://images.pexels.com/photos/1040879/pexels-photo-1040879.jpeg"
+            }
         ];
 
         this.populateHallOfFame(hallOfFameMembers);
