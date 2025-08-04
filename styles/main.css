@@ -246,6 +246,7 @@ body {
     position: relative;
     overflow: hidden;
     padding: var(--spacing-xxl) 0;
+    padding-top: 80px;
 }
 
 .hero::before {
@@ -270,6 +271,7 @@ body {
     position: relative;
     z-index: 1;
     width: 100%;
+    min-height: calc(100vh - 160px);
 }
 
 .hero-text {
@@ -325,15 +327,18 @@ body {
 .hero-carousel {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 450px;
     border-radius: var(--radius-xl);
     overflow: hidden;
+    background: var(--background-light);
 }
 
 .carousel-container {
     position: relative;
     width: 100%;
     height: 100%;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
 }
 
 .carousel-slide {
@@ -343,7 +348,9 @@ body {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
 }
 
 .carousel-slide.active {
@@ -355,13 +362,18 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: var(--radius-xl);
+    transition: transform 0.3s ease;
 }
 
+.carousel-slide:hover img {
+    transform: scale(1.05);
+}
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     color: white;
     border: none;
     padding: var(--spacing-sm) var(--spacing-md);
@@ -375,11 +387,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-btn.prev {
@@ -398,6 +413,10 @@ body {
     display: flex;
     gap: var(--spacing-xs);
     z-index: 10;
+    background: rgba(0, 0, 0, 0.3);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-full);
+    backdrop-filter: blur(10px);
 }
 
 .indicator {
@@ -407,15 +426,18 @@ body {
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: all var(--transition-base);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .indicator.active {
     background: var(--text-primary);
     transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .indicator:hover {
     background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
 }
 
 .scroll-indicator {
@@ -1404,10 +1426,11 @@ body {
         text-align: center;
         gap: var(--spacing-lg);
         padding: var(--spacing-lg);
+        min-height: calc(100vh - 120px);
     }
 
     .hero-carousel {
-        height: 300px;
+        height: 350px;
     }
 
     .carousel-btn {
@@ -1424,6 +1447,14 @@ body {
         right: var(--spacing-sm);
     }
 
+    .carousel-indicators {
+        bottom: var(--spacing-sm);
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
     .hero-buttons {
         justify-content: center;
     }
@@ -1483,7 +1514,7 @@ body {
     }
 
     .hero-carousel {
-        height: 250px;
+        height: 280px;
     }
 
     .carousel-btn {
@@ -1493,8 +1524,8 @@ body {
     }
 
     .indicator {
-        width: 10px;
-        height: 10px;
+        width: 8px;
+        height: 8px;
     }
 
     .section-title {

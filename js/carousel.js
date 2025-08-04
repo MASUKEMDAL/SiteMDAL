@@ -5,7 +5,8 @@ class HeroCarousel {
         this.slides = [];
         this.indicators = [];
         this.autoPlayInterval = null;
-        this.autoPlayDelay = 5000; // 5 seconds
+        this.autoPlayDelay = 4000; // 4 seconds
+        this.isTransitioning = false;
         this.init();
     }
 
@@ -15,6 +16,11 @@ class HeroCarousel {
         
         if (this.slides.length === 0) return;
 
+        // Initialize first slide
+        this.slides[0].classList.add('active');
+        if (this.indicators[0]) {
+            this.indicators[0].classList.add('active');
+        }
         this.setupEventListeners();
         this.startAutoPlay();
         this.preloadImages();
@@ -27,6 +33,7 @@ class HeroCarousel {
 
         if (prevBtn) {
             prevBtn.addEventListener('click', () => {
+                if (this.isTransitioning) return;
                 this.stopAutoPlay();
                 this.previousSlide();
                 this.startAutoPlay();
@@ -35,6 +42,7 @@ class HeroCarousel {
 
         if (nextBtn) {
             nextBtn.addEventListener('click', () => {
+                if (this.isTransitioning) return;
                 this.stopAutoPlay();
                 this.nextSlide();
                 this.startAutoPlay();
@@ -44,6 +52,7 @@ class HeroCarousel {
         // Indicator clicks
         this.indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => {
+                if (this.isTransitioning) return;
                 this.stopAutoPlay();
                 this.goToSlide(index);
                 this.startAutoPlay();
@@ -67,15 +76,20 @@ class HeroCarousel {
 
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
+            if (this.isTransitioning) return;
             const heroSection = document.querySelector('#hero');
+            if (!heroSection) return;
+            
             const heroRect = heroSection.getBoundingClientRect();
             const isHeroVisible = heroRect.top < window.innerHeight && heroRect.bottom > 0;
             
             if (isHeroVisible && e.key === 'ArrowLeft') {
+                e.preventDefault();
                 this.stopAutoPlay();
                 this.previousSlide();
                 this.startAutoPlay();
             } else if (isHeroVisible && e.key === 'ArrowRight') {
+                e.preventDefault();
                 this.stopAutoPlay();
                 this.nextSlide();
                 this.startAutoPlay();
@@ -169,19 +183,39 @@ class HeroCarousel {
     }
 
     nextSlide() {
+        if (this.isTransitioning) return;
+        this.isTransitioning = true;
+        
         this.currentSlide = (this.currentSlide + 1) % this.slides.length;
         this.updateSlide();
+        
+        setTimeout(() => {
+            this.isTransitioning = false;
+        }, 300);
     }
 
     previousSlide() {
+        if (this.isTransitioning) return;
+        this.isTransitioning = true;
+        
         this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
         this.updateSlide();
+        
+        setTimeout(() => {
+            this.isTransitioning = false;
+        }, 300);
     }
 
     goToSlide(index) {
+        if (this.isTransitioning) return;
         if (index >= 0 && index < this.slides.length) {
+            this.isTransitioning = true;
             this.currentSlide = index;
             this.updateSlide();
+            
+            setTimeout(() => {
+                this.isTransitioning = false;
+            }, 300);
         }
     }
 
@@ -196,8 +230,6 @@ class HeroCarousel {
             indicator.classList.toggle('active', index === this.currentSlide);
         });
 
-        // Trigger reflow for smooth transition
-        this.slides[this.currentSlide].offsetHeight;
     }
 
     startAutoPlay() {
@@ -221,9 +253,6 @@ class HeroCarousel {
             if (img && img.src) {
                 const preloadImg = new Image();
                 preloadImg.src = img.src;
-                preloadImg.onload = () => {
-                    img.style.opacity = '1';
-                };
             }
         });
     }
