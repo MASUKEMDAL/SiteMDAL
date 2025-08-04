@@ -17,6 +17,7 @@ class HeroCarousel {
 
         this.setupEventListeners();
         this.startAutoPlay();
+        this.preloadImages();
     }
 
     setupEventListeners() {
@@ -66,11 +67,15 @@ class HeroCarousel {
 
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
+            const heroSection = document.querySelector('#hero');
+            const heroRect = heroSection.getBoundingClientRect();
+            const isHeroVisible = heroRect.top < window.innerHeight && heroRect.bottom > 0;
+            
+            if (isHeroVisible && e.key === 'ArrowLeft') {
                 this.stopAutoPlay();
                 this.previousSlide();
                 this.startAutoPlay();
-            } else if (e.key === 'ArrowRight') {
+            } else if (isHeroVisible && e.key === 'ArrowRight') {
                 this.stopAutoPlay();
                 this.nextSlide();
                 this.startAutoPlay();
@@ -95,6 +100,7 @@ class HeroCarousel {
         carousel.addEventListener('touchmove', (e) => {
             if (!isDragging) return;
             endX = e.touches[0].clientX;
+            e.preventDefault(); // Prevent scrolling
         });
 
         carousel.addEventListener('touchend', () => {
@@ -125,6 +131,7 @@ class HeroCarousel {
             mouseStartX = e.clientX;
             this.stopAutoPlay();
             carousel.style.cursor = 'grabbing';
+            e.preventDefault(); // Prevent text selection
         });
 
         carousel.addEventListener('mousemove', (e) => {
@@ -154,7 +161,11 @@ class HeroCarousel {
         carousel.addEventListener('mouseleave', () => {
             mouseDown = false;
             carousel.style.cursor = 'grab';
+            this.startAutoPlay();
         });
+        
+        // Set initial cursor
+        carousel.style.cursor = 'grab';
     }
 
     nextSlide() {
@@ -185,14 +196,8 @@ class HeroCarousel {
             indicator.classList.toggle('active', index === this.currentSlide);
         });
 
-        // Add slide animation
-        const activeSlide = this.slides[this.currentSlide];
-        if (activeSlide) {
-            activeSlide.style.animation = 'slideIn 0.5s ease-in-out';
-            setTimeout(() => {
-                activeSlide.style.animation = '';
-            }, 500);
-        }
+        // Trigger reflow for smooth transition
+        this.slides[this.currentSlide].offsetHeight;
     }
 
     startAutoPlay() {
@@ -216,15 +221,33 @@ class HeroCarousel {
             if (img && img.src) {
                 const preloadImg = new Image();
                 preloadImg.src = img.src;
+                preloadImg.onload = () => {
+                    img.style.opacity = '1';
+                };
             }
         });
+    }
+    
+    // Method to pause carousel when page is not visible
+    handleVisibilityChange() {
+        if (document.hidden) {
+            this.stopAutoPlay();
+        } else {
+            this.startAutoPlay();
+        }
     }
 }
 
 // Initialize carousel when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     window.heroCarousel = new HeroCarousel();
-    window.heroCarousel.preloadImages();
+    
+    // Handle page visibility changes
+    document.addEventListener('visibilitychange', () => {
+        if (window.heroCarousel) {
+            window.heroCarousel.handleVisibilityChange();
+        }
+    });
 });
 
 // Export for use in other modules
